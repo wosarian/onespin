@@ -1,0 +1,32 @@
+{
+  "pack": {
+    "description": [
+      {
+        "text": "\"What if...men?\"",
+        "color": "gray",
+        "italic": true
+      }
+    ],
+    "pack_format": 71,
+    "supported_formats": [
+      55,
+      71
+    ]
+  },
+  "filter": {
+    "block": [
+      {
+        "namespace": "minecraft",
+        "path": "advancement/.*"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*"
+      },
+      {
+				"namespace": "vanillatweaks",
+				"path": "advancement/.*"
+			}
+    ]
+  }
+}

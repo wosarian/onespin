@@ -1,0 +1,13 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "onespin:item/main/spectator_tool"
+    },
+    "display": {
+        "head": {
+            "rotation": [ 0, 0, 45 ],
+            "translation": [ -1, 13, 7],
+            "scale":[ 1, 1, 1]
+        }
+    }
+}
