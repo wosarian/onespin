@@ -121,24 +121,6 @@ execute \
         scoreboard players set @s OS-RTCResetDelay 0
 
 
-
-scoreboard players operation @s OS-playTimeSeconds = @s OS-playTime
-execute \ 
-    store result score @s OS-playTimeSeconds run \ 
-        scoreboard players operation @s OS-playTimeSeconds /= @n[tag=OS-bob] OS-const-20
-scoreboard players operation @s OS-playTimeMinutes = @s OS-playTimeSeconds
-execute \ 
-    store result score @s OS-playTimeMinutes run \ 
-        scoreboard players operation @s OS-playTimeMinutes /= @n[tag=OS-bob] OS-const-60
-scoreboard players operation @s OS-playTimeHours = @s OS-playTimeMinutes
-execute \ 
-    store result score @s OS-playTimeHours run \ 
-        scoreboard players operation @s OS-playTimeHours /= @n[tag=OS-bob] OS-const-60
-scoreboard players operation @s OS-playTimeDays = @s OS-playTimeHours
-execute \ 
-    store result score @s OS-playTimeDays run \ 
-        scoreboard players operation @s OS-playTimeDays /= @n[tag=OS-bob] OS-const-24
-
 # Run if player is in void.
 execute if entity @s[x=-14999992,y=-65,z=-14999992,dx=29999984,dy=-29999933,dz=29999984] run effect give @s minecraft:saturation 2 255 true
 execute if entity @s[x=-14999992,y=-65,z=-14999992,dx=29999984,dy=-29999933,dz=29999984] run effect give @s minecraft:regeneration 2 255 true
@@ -167,11 +149,6 @@ execute if entity @s[scores={nv=1..}] run function onespin:z/trigger/nv
 scoreboard players enable @s skygamesSave
 scoreboard players enable @s panel
 scoreboard players enable @s leaveSurvival
-
-execute store result score @s OS-playerMaxHealth run attribute @s minecraft:max_health get 1
-
-scoreboard players operation @s OS-playerDamage = @s OS-playerMaxHealth
-execute store result score @s OS-playerDamage run scoreboard players operation @s OS-playerDamage -= @s OS-playerHealth
 
 
 execute at @s if entity @s[tag=!OS-4-locked] unless predicate onespin:location/in_dimension/any_minecraft run xp set @s 0 levels

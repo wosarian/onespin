@@ -56,7 +56,7 @@ execute if entity @s[tag=!OS-listStoredLocations-start] store result score @s OS
 
 # Removes constant 15 from forStoredLocation so it doesn't start to print locations from location with ID 1, but the first location on the selected page.
 
-execute if entity @s[tag=!OS-listStoredLocations-start] store result score @s OS-forStoredLocation run scoreboard players operation @s OS-forStoredLocation -= @n[tag=OS-bob] OS-const-15
+execute if entity @s[tag=!OS-listStoredLocations-start] store result score @s OS-forStoredLocation run scoreboard players operation @s OS-forStoredLocation -= #OS-holder OS-const-15
 
 
 execute if entity @s[tag=!OS-listStoredLocations-start] run tag @s add OS-listStoredLocations-start

@@ -96,11 +96,6 @@ execute as @a \
 execute as @e[type=#onespin:explosive] \ 
     run function onespin:z/defender_entity
 
-# Runs onespin Randomized Scores Library module for Bob.
-
-execute as @e[tag=OS-bob] \ 
-    run function onespin:z/randomized_scores
-
 # # Survival.
 
 # Runs pet_protection function for every tameable entity.
