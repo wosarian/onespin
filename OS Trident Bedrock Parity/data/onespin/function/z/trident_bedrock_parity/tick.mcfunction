@@ -1,0 +1,1 @@
+execute as @e[type=drowned,tag=!OS-drownedMainhandUpdated] run function onespin:z/trident_bedrock_parity/update_drowned_mainhand
