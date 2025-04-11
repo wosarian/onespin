@@ -1,7 +1,7 @@
 
 # Counters
 
-execute store result score #OS-holder OS-loadedMobs if entity @e[type=!#onespin:non_living]
+execute store result score #OS-holder OS-loadedMobs if entity @e[type=!#onespin:non_living,type=!player]
 execute store result score #OS-holder OS-loadedZombies if entity @e[type=zombie]
 execute store result score #OS-holder OS-loadedCreepers if entity @e[type=creeper]
 execute store result score #OS-holder OS-loadedPigs if entity @e[type=pig]

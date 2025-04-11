@@ -1,4 +1,8 @@
 
+# Main
+
+execute unless score @s OS-playerID = @s OS-playerID store result score @s OS-playerID run scoreboard players add #OS-lastID OS-playerID 1
+
 # Players
 
 execute store result score @s OS-playerMaxHealth run attribute @s minecraft:max_health get 1

@@ -126,25 +126,7 @@ scoreboard players add @e[tag=OS-bob] OS-forID 0
 
 scoreboard players add @e[tag=OS-bob] OS-limboLevel 0
 
-# Counters
-
-scoreboard players add @e[tag=OS-bob] OS-onlinePlayers 0
-scoreboard players add @e[tag=OS-bob] OS-loadedMobs 0
-scoreboard players add @e[tag=OS-bob] OS-loadedZombies 0
-scoreboard players add @e[tag=OS-bob] OS-loadedCreepers 0
-scoreboard players add @e[tag=OS-bob] OS-loadedPigs 0
-scoreboard players add @e[tag=OS-bob] OS-loadedTNTs 0
-scoreboard players add @e[tag=OS-bob] OS-loadedSquids 0
 scoreboard players add @e[tag=OS-bob] OS-storedLocations 0
-
-# Constants
-
-scoreboard players set @e[tag=OS-bob] OS-const-0 0
-scoreboard players set @e[tag=OS-bob] OS-const-1 1
-scoreboard players set @e[tag=OS-bob] OS-const-15 15
-scoreboard players set @e[tag=OS-bob] OS-const-20 20
-scoreboard players set @e[tag=OS-bob] OS-const-24 24
-scoreboard players set @e[tag=OS-bob] OS-const-60 60
 
 # CS:M3
 

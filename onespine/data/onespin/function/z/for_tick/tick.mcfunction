@@ -4,27 +4,9 @@
 # # #
 
 
-# # Dynamic values that might be needed.
-
-# Stores all online players.
-
-execute store result score @n[tag=OS-bob] OS-onlinePlayers if entity @a
-
 # Stores all stored locations.
 
 execute store result score @n[tag=OS-bob] OS-storedLocations run data get storage onespin:locations stored_location
-
-# Stores all mobs.
-
-execute store result score @n[tag=OS-bob] OS-loadedMobs if entity @e[type=!#onespin:non_living,type=!player]
-
-# Stores all zombies.
-
-execute store result score @n[tag=OS-bob] OS-loadedZombies if entity @e[type=zombie]
-execute store result score @n[tag=OS-bob] OS-loadedPigs if entity @e[type=pig]
-execute store result score @n[tag=OS-bob] OS-loadedTNTs if entity @e[type=tnt]
-execute store result score @n[tag=OS-bob] OS-loadedCreepers if entity @e[type=creeper]
-execute store result score @n[tag=OS-bob] OS-loadedSquids if entity @e[type=squid]
 
 
 
