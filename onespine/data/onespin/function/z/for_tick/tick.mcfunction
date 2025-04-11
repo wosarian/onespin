@@ -32,15 +32,15 @@ execute store result score @n[tag=OS-bob] OS-loadedSquids if entity @e[type=squi
 
 # Start.
 
-execute if score @n[tag=OS-bob] OS-forID < @n[tag=OS-bob] OSID store result storage onespin:players player.temp.ID int 1 run scoreboard players add @n[tag=OS-bob] OS-forID 1
+execute if score @n[tag=OS-bob] OS-forID < #OS-lastID OSID store result storage onespin:players player.temp.ID int 1 run scoreboard players add @n[tag=OS-bob] OS-forID 1
 
 # Main.
 
-execute if score @n[tag=OS-bob] OS-forID <= @n[tag=OS-bob] OSID as @a run function onespin:z/for_tick/player_by_id with storage onespin:players player.temp
+execute if score @n[tag=OS-bob] OS-forID <= #OS-lastID OSID as @a run function onespin:z/for_tick/player_by_id with storage onespin:players player.temp
 
 # End if all IDs have been gone through.
 
-execute if score @n[tag=OS-bob] OS-forID >= @n[tag=OS-bob] OSID run scoreboard players set @n[tag=OS-bob] OS-forID 0
+execute if score @n[tag=OS-bob] OS-forID >= #OS-lastID OSID run scoreboard players set @n[tag=OS-bob] OS-forID 0
 
 
 

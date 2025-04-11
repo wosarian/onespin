@@ -29,14 +29,6 @@ execute \
     if entity @s[tag=!OS-firstJoined] run \ 
         tag @s add OS-firstJoined
 
-
-# Adds unique OSID to every new player.
-
-execute \ 
-    unless score @s OSID = @s OSID \ 
-        store result score @s OSID run \ 
-            scoreboard players add @n[tag=OS-bob] OSID 1
-
 # # # Permissions
 
 # Adds OS-member tag to every new player.
