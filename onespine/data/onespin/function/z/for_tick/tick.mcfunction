@@ -114,11 +114,6 @@ execute as @e[type=#onespin:tameable,tag=!OS-4-petProtected] at @s if predicate 
 execute as @e[type=!#onespin:non_living] at @s if predicate onespin:location/dimension/any_survival \ 
     run function onespin:z/minigames/minigame_4/silence_tagged_mob
 
-# Runs change drowned mainhand function for every Drowned.
-
-execute as @e[type=drowned,tag=!OS-4-drownedMainhandReplaced] at @s if predicate onespin:location/dimension/any_survival \ 
-    run function onespin:z/minigames/minigame_4/change_drowned_mainhand
-
 # Runs update armor stands function for every Armor Stand.
 
 execute as @e[type=armor_stand,tag=!OS-4-armorStandUpdated] at @s if predicate onespin:location/dimension/any_survival \ 
