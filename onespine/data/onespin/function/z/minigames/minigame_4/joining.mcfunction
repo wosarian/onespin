@@ -28,14 +28,14 @@ $execute as @s[tag=OS-4-joining,scores={OSID=$(ID)}] run tag @s add OS-4-locked
 # survival
 $execute as @s[tag=OS-4-joining,scores={OSID=$(ID)}] run gamemode survival @s
 # restores XP
-$execute as @s[tag=OS-4-joining,scores={OSID=$(ID)},predicate=onespin:location/dimension/any_survival] run function onespin:z/restore_xp with storage onespin:minigame_4 player.$(ID)
+$execute as @s[tag=OS-4-joining,scores={OSID=$(ID)},predicate=onespin:location/in_dimension/any_minecraft] run function onespin:z/restore_xp with storage onespin:minigame_4 player.$(ID)
 # restore spawnpoint
-$execute as @s[tag=OS-4-joining,scores={OSID=$(ID)},predicate=onespin:location/dimension/any_survival] run function onespin:z/set_spawnpoint with storage onespin:minigame_4 player.$(ID).spawnpoint
+$execute as @s[tag=OS-4-joining,scores={OSID=$(ID)},predicate=onespin:location/in_dimension/any_minecraft] run function onespin:z/set_spawnpoint with storage onespin:minigame_4 player.$(ID).spawnpoint
 
 # set to 0
 # teleports to spawn if no data
-$execute as @s[tag=OS-4-joining,scores={OSID=$(ID)},predicate=onespin:location/dimension/any_survival] if score @s OS-playerHealth = @s OS-playerMaxHealth run function onespin:z/damage with storage onespin:minigame_4 player.$(ID)
+$execute as @s[tag=OS-4-joining,scores={OSID=$(ID)},predicate=onespin:location/in_dimension/any_minecraft] if score @s OS-playerHealth = @s OS-playerMaxHealth run function onespin:z/damage with storage onespin:minigame_4 player.$(ID)
 
 $title @s[tag=OS-4-joining,scores={OSID=$(ID)}] title [ "", { "text": "Welcome to Survival!", "color": "yellow", "bold": false, "underlined": false } ]
 
-$execute as @s[tag=OS-4-joining,scores={OSID=$(ID)},predicate=onespin:location/dimension/any_survival] if score @s OS-playerHealth = @s OS-playerMaxHealth run tag @s remove OS-4-joining
+$execute as @s[tag=OS-4-joining,scores={OSID=$(ID)},predicate=onespin:location/in_dimension/any_minecraft] if score @s OS-playerHealth = @s OS-playerMaxHealth run tag @s remove OS-4-joining

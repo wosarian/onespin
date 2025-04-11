@@ -49,7 +49,7 @@ execute if score @n[tag=OS-bob] OS-forID >= #OS-lastID OSID run scoreboard playe
 # Stop time if no players are in Survival nor SkyGames.
 
 execute as @a at @s \ 
-    unless predicate onespin:location/dimension/overworld \ 
+    unless predicate onespin:location/in_dimension/overworld \ 
         unless predicate onespin:location/dimension/minigame_5 \ 
             unless predicate onespin:location/dimension/dimension_3 \
                 unless predicate onespin:location/dimension/dimension_0 \ 
@@ -57,7 +57,7 @@ execute as @a at @s \
 
 # Continue time if any player is in Survival or SkyGames.
 
-execute as @a[predicate=onespin:location/dimension/overworld] run gamerule doDaylightCycle true
+execute as @a[predicate=onespin:location/in_dimension/overworld] run gamerule doDaylightCycle true
 
 execute as @a[predicate=onespin:location/dimension/minigame_5] run gamerule doDaylightCycle true
 
@@ -105,16 +105,16 @@ execute as @e[tag=OS-bob] \
 
 # Runs pet_protection function for every tameable entity.
 
-execute as @e[type=#onespin:tameable,tag=!OS-4-petProtected] at @s if predicate onespin:location/dimension/any_survival \ 
+execute as @e[type=#onespin:tameable,tag=!OS-4-petProtected] at @s if predicate onespin:location/in_dimension/any_minecraft \ 
     if predicate onespin:entity/has_owner \
         run function onespin:z/minigames/minigame_4/protect_pet_on_tame
 
 # Runs silence tagged animal function for every animal.
 
-execute as @e[type=!#onespin:non_living] at @s if predicate onespin:location/dimension/any_survival \ 
+execute as @e[type=!#onespin:non_living] at @s if predicate onespin:location/in_dimension/any_minecraft \ 
     run function onespin:z/minigames/minigame_4/silence_tagged_mob
 
 # Runs update armor stands function for every Armor Stand.
 
-execute as @e[type=armor_stand,tag=!OS-4-armorStandUpdated] at @s if predicate onespin:location/dimension/any_survival \ 
+execute as @e[type=armor_stand,tag=!OS-4-armorStandUpdated] at @s if predicate onespin:location/in_dimension/any_minecraft \ 
     run function onespin:z/minigames/minigame_4/update_armor_stands

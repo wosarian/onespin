@@ -18,9 +18,9 @@ $data modify storage onespin:players player.$(ID).spawnpoint.x set from entity @
 $data modify storage onespin:players player.$(ID).spawnpoint.y set from entity @s[scores={OSID=$(ID)}] respawn.pos[1]
 $data modify storage onespin:players player.$(ID).spawnpoint.z set from entity @s[scores={OSID=$(ID)}] respawn.pos[2]
 
-$execute as @s[scores={OSID=$(ID)}] at @s if predicate onespin:location/dimension/overworld run data modify storage onespin:players player.$(ID).spawnpoint.dimension set value "minecraft:overworld"
+$execute as @s[scores={OSID=$(ID)}] at @s if predicate onespin:location/in_dimension/overworld run data modify storage onespin:players player.$(ID).spawnpoint.dimension set value "minecraft:overworld"
 
-$execute as @s[scores={OSID=$(ID)}] at @s unless predicate onespin:location/dimension/overworld run data modify storage onespin:players player.$(ID).spawnpoint.dimension set from entity @s respawn.dimension
+$execute as @s[scores={OSID=$(ID)}] at @s unless predicate onespin:location/in_dimension/overworld run data modify storage onespin:players player.$(ID).spawnpoint.dimension set from entity @s respawn.dimension
 
 
 $execute \ 
@@ -37,11 +37,11 @@ $execute \
 $execute \ 
     as @s[tag=OS-4-locked,scores={OSID=$(ID)}] \ 
         at @s \ 
-            unless predicate onespin:location/dimension/any_survival run \ 
+            unless predicate onespin:location/in_dimension/any_minecraft run \ 
                 function onespin:z/teleport with storage onespin:minigame_4 player.$(ID)
 
 $scoreboard players add @s[scores={OSID=$(ID)}] OS-coordinatesUpdateDelay 1
-$execute as @s[scores={OSID=$(ID),OS-coordinatesUpdateDelay=5..},name=!wosarian,tag=!OS-3-inGame,tag=!OS-1-inGame] at @s if predicate onespin:location/dimension/any_survival run title @s actionbar [ { "text": "X: ", "color": "red" }, { "score": { "objective": "OS-playerX", "name": "*" }, "color": "red" }, { "text": " | ", "color": "white" }, { "text": "Y: ", "color": "green" }, { "score": { "objective": "OS-playerY", "name": "*" }, "color": "green" }, { "text": " | ", "color": "white" }, { "text": "Z: ", "color": "aqua" }, { "score": { "objective": "OS-playerZ", "name": "*" }, "color": "aqua" }]
+$execute as @s[scores={OSID=$(ID),OS-coordinatesUpdateDelay=5..},name=!wosarian,tag=!OS-3-inGame,tag=!OS-1-inGame] at @s if predicate onespin:location/in_dimension/any_minecraft run title @s actionbar [ { "text": "X: ", "color": "red" }, { "score": { "objective": "OS-playerX", "name": "*" }, "color": "red" }, { "text": " | ", "color": "white" }, { "text": "Y: ", "color": "green" }, { "score": { "objective": "OS-playerY", "name": "*" }, "color": "green" }, { "text": " | ", "color": "white" }, { "text": "Z: ", "color": "aqua" }, { "score": { "objective": "OS-playerZ", "name": "*" }, "color": "aqua" }]
 $title @s[scores={OSID=$(ID),OS-coordinatesUpdateDelay=5..},name=wosarian,tag=!OS-3-inGame,tag=!OS-1-inGame] actionbar [ { "text": "X: ", "color": "red" }, { "score": { "objective": "OS-playerX", "name": "*" }, "color": "red" }, { "text": " | ", "color": "white" }, { "text": "Y: ", "color": "green" }, { "score": { "objective": "OS-playerY", "name": "*" }, "color": "green" }, { "text": " | ", "color": "white" }, { "text": "Z: ", "color": "aqua" }, { "score": { "objective": "OS-playerZ", "name": "*" }, "color": "aqua" }, { "text": " | ", "color": "white" }, { "score": { "objective": "OSID", "name": "@n[tag=OS-bob]" }, "color": "light_purple" }]
 $scoreboard players reset @s[scores={OSID=$(ID),OS-coordinatesUpdateDelay=5..}] OS-coordinatesUpdateDelay
 

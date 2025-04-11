@@ -174,11 +174,11 @@ scoreboard players operation @s OS-playerDamage = @s OS-playerMaxHealth
 execute store result score @s OS-playerDamage run scoreboard players operation @s OS-playerDamage -= @s OS-playerHealth
 
 
-execute at @s if entity @s[tag=!OS-4-locked] unless predicate onespin:location/dimension/any_survival run xp set @s 0 levels
-execute at @s if entity @s[tag=!OS-4-locked] unless predicate onespin:location/dimension/any_survival run xp set @s 0 points
+execute at @s if entity @s[tag=!OS-4-locked] unless predicate onespin:location/in_dimension/any_minecraft run xp set @s 0 levels
+execute at @s if entity @s[tag=!OS-4-locked] unless predicate onespin:location/in_dimension/any_minecraft run xp set @s 0 points
 
-execute at @s if entity @s[tag=OS-4-locked] if predicate onespin:location/dimension/any_survival run tag @s add OS-mod-fallingTree-allowed
-execute at @s if entity @s[tag=!OS-4-locked] unless predicate onespin:location/dimension/any_survival run tag @s remove OS-mod-fallingTree-allowed
+execute at @s if entity @s[tag=OS-4-locked] if predicate onespin:location/in_dimension/any_minecraft run tag @s add OS-mod-fallingTree-allowed
+execute at @s if entity @s[tag=!OS-4-locked] unless predicate onespin:location/in_dimension/any_minecraft run tag @s remove OS-mod-fallingTree-allowed
 
 
 #execute as @n[tag=ee] at @s if block ~ ~ ~ air store result storage onespin:players player.temp.ray int 1 run scoreboard players add wosarian raycast 1
@@ -190,12 +190,12 @@ execute at @s if entity @s[tag=!OS-4-locked] unless predicate onespin:location/d
 
 # Survival
 # recipes
-execute at @s unless predicate onespin:location/dimension/any_survival run tag @s remove OS-4-defaultRecipesAllowed
-execute at @s if predicate onespin:location/dimension/any_survival run tag @s add OS-4-defaultRecipesAllowed
+execute at @s unless predicate onespin:location/in_dimension/any_minecraft run tag @s remove OS-4-defaultRecipesAllowed
+execute at @s if predicate onespin:location/in_dimension/any_minecraft run tag @s add OS-4-defaultRecipesAllowed
 recipe take @s[tag=!OS-4-defaultRecipesAllowed] *
 recipe give @s[tag=OS-4-defaultRecipesAllowed] *
 
-#execute as @s[tag=OS-4-lockedOut] at @s if predicate onespin:location/dimension/any_survival in onespin:dimension_2 run tp @s -271 57 29
+#execute as @s[tag=OS-4-lockedOut] at @s if predicate onespin:location/in_dimension/any_minecraft in onespin:dimension_2 run tp @s -271 57 29
 
 
 execute at @s unless predicate onespin:location/dimension/minigame_5 run tag @s remove OS-5-inGame
@@ -206,7 +206,7 @@ effect give @s[tag=OS-5-inGame] saturation 2 255 true
 #207 63 2
 
 
-execute if entity @s[tag=OS-4-lockedOut,predicate=onespin:location/dimension/any_survival] in onespin:dimension_2 run tp @s -269 57 49
+execute if entity @s[tag=OS-4-lockedOut,predicate=onespin:location/in_dimension/any_minecraft] in onespin:dimension_2 run tp @s -269 57 49
 
 
 

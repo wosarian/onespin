@@ -11,10 +11,10 @@
 
 # This reduces explosion power of all explosive entities outside Survival and Dimension 5.
 
-execute if entity @s[type=#onespin:explosive,tag=!OS-entityExplosiveDefused] at @s unless predicate onespin:location/dimension/any_survival unless predicate onespin:location/dimension/dimension_5 run data merge entity @s {explosion_power:0}
-execute if entity @s[type=#onespin:explosive,tag=!OS-entityExplosiveDefused] at @s unless predicate onespin:location/dimension/any_survival unless predicate onespin:location/dimension/dimension_5 run tag @s add OS-entityExplosiveDefused
+execute if entity @s[type=#onespin:explosive,tag=!OS-entityExplosiveDefused] at @s unless predicate onespin:location/in_dimension/any_minecraft unless predicate onespin:location/dimension/dimension_5 run data merge entity @s {explosion_power:0}
+execute if entity @s[type=#onespin:explosive,tag=!OS-entityExplosiveDefused] at @s unless predicate onespin:location/in_dimension/any_minecraft unless predicate onespin:location/dimension/dimension_5 run tag @s add OS-entityExplosiveDefused
 
 # This kills all explosive entities (except creeper) outside Survival and Dimension 5.
 
-execute if entity @s[type=#onespin:explosive_no_creeper] at @s unless predicate onespin:location/dimension/any_survival unless predicate onespin:location/dimension/dimension_5 run kill @s
+execute if entity @s[type=#onespin:explosive_no_creeper] at @s unless predicate onespin:location/in_dimension/any_minecraft unless predicate onespin:location/dimension/dimension_5 run kill @s
 
