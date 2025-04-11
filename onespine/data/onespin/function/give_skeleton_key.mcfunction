@@ -20,3 +20,7 @@ give @s minecraft:stick[item_name={"text":"OS Skeleton Key"},rarity=epic,item_mo
 
 # Tell the executor that OS Skeleton Key has been given.
 tellraw @s ["Gave 1 ",{"text":"[OS Skeleton Key]","color":"light_purple"}," to ",{"selector":"@s"}]
+
+
+
+# test
