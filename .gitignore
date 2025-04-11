@@ -2,5 +2,5 @@
 **/pack.png
 **/commit.bat
 **/ignore.bat
-**/onespine/data/onespin/recipe/**
-!**/onespine/data/onespin/recipe/netherite_*_smithing.json
+onespine/data/onespin/recipe/**
+!onespine/data/onespin/recipe/netherite_*_smithing.json
