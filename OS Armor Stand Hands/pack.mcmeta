@@ -1,0 +1,16 @@
+{
+  "pack": {
+    "description": [
+      {
+        "text": "\"What if...men?\"",
+        "color": "gray",
+        "italic": true
+      }
+    ],
+    "pack_format": 71,
+    "supported_formats": [
+      55,
+      71
+    ]
+  }
+}

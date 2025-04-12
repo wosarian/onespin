@@ -79,8 +79,3 @@ execute as @e[type=#onespin:tameable,tag=!OS-4-petProtected] at @s if predicate 
 
 execute as @e[type=!#onespin:non_living] at @s if predicate onespin:location/in_dimension/any_minecraft \ 
     run function onespin:z/minigames/minigame_4/silence_tagged_mob
-
-# Runs update armor stands function for every Armor Stand.
-
-execute as @e[type=armor_stand,tag=!OS-4-armorStandUpdated] at @s if predicate onespin:location/in_dimension/any_minecraft \ 
-    run function onespin:z/minigames/minigame_4/update_armor_stands
