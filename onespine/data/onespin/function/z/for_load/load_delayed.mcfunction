@@ -72,7 +72,7 @@ execute unless entity @e[tag=OS-bob] in onespin:dimension_1 run summon armor_sta
 
 # Main
 
-scoreboard players display name @e[tag=OS-bob] OSID {text:"bob",bold:true,color:"aqua"}
+scoreboard players display name @e[tag=OS-bob] OS-playerID {text:"bob",bold:true,color:"aqua"}
 scoreboard players display name @e[tag=OS-bob] OS-forID {text:" "}
 
 # Randomized Scores

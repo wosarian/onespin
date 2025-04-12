@@ -1,4 +1,21 @@
 
+# Main
+
+execute as @a unless score @s OS-playerID = @s OS-playerID store result score @s OS-playerID run scoreboard players add #OS-lastID OS-playerID 1
+
+# Run onespin:z/library/for_tick/player_by_id for every existing player ID
+
+execute if score #OS-holder OS-forPlayerID < #OS-lastID OS-playerID \ 
+    store result storage onespin:players player.temp.ID int 1 \ 
+        run scoreboard players add #OS-holder OS-forPlayerID 1
+
+execute if score #OS-holder OS-forPlayerID <= #OS-lastID OS-playerID \ 
+    as @a \ 
+        run function onespin:z/library/for_tick/player_by_id with storage onespin:players player.temp
+
+execute if score #OS-holder OS-forPlayerID >= #OS-lastID OS-playerID \ 
+    run scoreboard players set #OS-holder OS-forPlayerID 0
+
 # Counters
 
 execute store result score #OS-holder OS-loadedMobs if entity @e[type=!#onespin:non_living,type=!player]

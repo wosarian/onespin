@@ -2,9 +2,10 @@
 # Main
 
 scoreboard objectives add OS-playerID dummy
-scoreboard objectives modify OS-forPlayerID displayname {"text": "Player ID"}
+scoreboard objectives modify OS-playerID displayname {"text": "Player ID"}
 scoreboard objectives add OS-forPlayerID dummy
 scoreboard objectives modify OS-forPlayerID displayname {"text": "For Every Player ID"}
+scoreboard players add #OS-holder OS-forPlayerID 0
 
 # Constants
 

@@ -9,20 +9,9 @@
 execute store result score @n[tag=OS-bob] OS-storedLocations run data get storage onespin:locations stored_location
 
 
-
-# # Function inside of this loop gets ran for every one player according to their ID and goes to next player next tick until it reaches the last ID.
-
-# Start.
-
-execute if score @n[tag=OS-bob] OS-forID < #OS-lastID OSID store result storage onespin:players player.temp.ID int 1 run scoreboard players add @n[tag=OS-bob] OS-forID 1
-
-# Main.
-
-execute if score @n[tag=OS-bob] OS-forID <= #OS-lastID OSID as @a run function onespin:z/for_tick/player_by_id with storage onespin:players player.temp
-
-# End if all IDs have been gone through.
-
-execute if score @n[tag=OS-bob] OS-forID >= #OS-lastID OSID run scoreboard players set @n[tag=OS-bob] OS-forID 0
+execute if score #OS-holder OS-forPlayerID <= #OS-lastID OS-playerID \ 
+    as @a \ 
+        run function onespin:z/for_tick/player_by_id with storage onespin:players player.temp
 
 
 

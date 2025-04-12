@@ -52,33 +52,33 @@ execute \
 
 execute \ 
     unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
-        if score @s OSID matches 1 \ 
+        if score @s OS-playerID matches 1 \ 
             run scoreboard players set @s OS-permissionLevel 4
 
 # Sets a permission level to spoockybro.
 
 execute \ 
     unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
-        if score @s OSID matches 2 \ 
+        if score @s OS-playerID matches 2 \ 
             run scoreboard players set @s OS-permissionLevel 3
 
 # Sets a permission level to teratoph.
 
 execute \ 
     unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
-        if score @s OSID matches 3 \ 
+        if score @s OS-playerID matches 3 \ 
             run scoreboard players set @s OS-permissionLevel 3
 
 # Sets a permission level to _Dere_.
 
 execute \ 
     unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
-        if score @s OSID matches 4 \ 
+        if score @s OS-playerID matches 4 \ 
             run scoreboard players set @s OS-permissionLevel 3
 
 # Sets a permission level to _Shouly.
 
-execute unless score @s OS-permissionLevel = @s OS-permissionLevel if score @s OSID matches 5 run scoreboard players set @s OS-permissionLevel 3
+execute unless score @s OS-permissionLevel = @s OS-permissionLevel if score @s OS-playerID matches 5 run scoreboard players set @s OS-permissionLevel 3
 
 
 
@@ -97,7 +97,7 @@ tag @s remove OS-allowTeleportLocation
 tag @s remove OS-resetScoresFunction
 tag @s remove OS-pass-1
 tag @s remove OS-allowFallingTree
-clear @s[scores={OSID=3..}] *[custom_data={"OS-skeletonKey":true}]
+clear @s[scores={OS-playerID=3..}] *[custom_data={"OS-skeletonKey":true}]
 
 tag @s[advancements={onespin:use_tagged_item=true}] add OS-taggedItemUsing
 tag @s[advancements={onespin:use_tagged_item=false}] remove OS-taggedItemUsing
@@ -197,8 +197,8 @@ execute if entity @s[tag=OS-inLibrary] run effect give @s night_vision infinite 
 
 
 # You are the chosen one
-execute as @s[x=-145,y=-59,z=75.9,dx=1,dy=1,dz=0,scores={OSID=1}] at @s in onespin:dimension_1 run tp @s ~ ~ 77
-execute as @s[x=-145,y=-59,z=76.1,dx=1,dy=1,dz=0,scores={OSID=1}] at @s in onespin:dimension_1 run tp @s ~ ~ 75
+execute as @s[x=-145,y=-59,z=75.9,dx=1,dy=1,dz=0,scores={OS-playerID=1}] at @s in onespin:dimension_1 run tp @s ~ ~ 77
+execute as @s[x=-145,y=-59,z=76.1,dx=1,dy=1,dz=0,scores={OS-playerID=1}] at @s in onespin:dimension_1 run tp @s ~ ~ 75
 
 
 # Branches.

@@ -67,12 +67,8 @@ gamerule allowFireTicksAwayFromPlayer false
 
 # Main
 
-scoreboard objectives add OSID dummy
-scoreboard objectives modify OSID displayname {"text": "Player ID"}
 scoreboard objectives add OS-permissionLevel dummy
 scoreboard objectives modify OS-permissionLevel displayname {"text": "Permission Level"}
-scoreboard objectives add OS-forID dummy
-scoreboard objectives modify OS-forID displayname {"text": "For Every Player ID"}
 
 # Other
 
@@ -140,6 +136,8 @@ scoreboard objectives remove OS-playerDying
 scoreboard objectives remove OS-playerDyingDelay
 scoreboard objectives remove OS-playerInput-sprint
 scoreboard objectives remove OS-tickSpeed
+scoreboard objectives remove OS-forID
+scoreboard objectives remove OSID
 
 # Survival
 
