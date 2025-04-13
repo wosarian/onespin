@@ -1,0 +1,1 @@
+execute as @e[type=armor_stand,tag=!OS-armorStandUpdated] run function armor_stand_hands:z/update_armor_stand
