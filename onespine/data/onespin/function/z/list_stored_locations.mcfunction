@@ -26,9 +26,9 @@ execute \
 
 # Tests if there are stored locations to list and returns the function if false.
 
-execute unless data storage onespin:locations stored_location run tellraw @s ["",{"text":"There are no stored locations to list","color":"red"}]
-execute unless data storage onespin:locations stored_location run scoreboard players reset @s warplist
-execute unless data storage onespin:locations stored_location run return fail
+execute unless data storage grenadier:locations stored_location run tellraw @s ["",{"text":"There are no stored locations to list","color":"red"}]
+execute unless data storage grenadier:locations stored_location run scoreboard players reset @s warplist
+execute unless data storage grenadier:locations stored_location run return fail
 
 
 
@@ -56,7 +56,7 @@ execute if entity @s[tag=!OS-listStoredLocations-start] store result score @s OS
 
 # Removes constant 15 from forStoredLocation so it doesn't start to print locations from location with ID 1, but the first location on the selected page.
 
-execute if entity @s[tag=!OS-listStoredLocations-start] store result score @s OS-forStoredLocation run scoreboard players operation @s OS-forStoredLocation -= #OS-holder OS-const-15
+execute if entity @s[tag=!OS-listStoredLocations-start] store result score @s OS-forStoredLocation run scoreboard players operation @s OS-forStoredLocation -= #grenadier-main grenadier-const-15
 
 
 execute if entity @s[tag=!OS-listStoredLocations-start] run tag @s add OS-listStoredLocations-start

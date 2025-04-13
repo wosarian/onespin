@@ -16,22 +16,22 @@ execute if entity @s[scores={OS-permissionLevel=..1}] run \
 
 
 
-$execute if data storage onespin:locations stored_location.$(ID) run tellraw @s ["",{"text":"Location with the specified ID is already stored","color":"red"}]
+$execute if data storage grenadier:locations stored_location.$(ID) run tellraw @s ["",{"text":"Location with the specified ID is already stored","color":"red"}]
 #
-$execute if data storage onespin:locations stored_location.$(ID) run return fail
+$execute if data storage grenadier:locations stored_location.$(ID) run return fail
 
-$data modify storage onespin:locations stored_location.$(ID).name set value "$(name)"
+$data modify storage grenadier:locations stored_location.$(ID).name set value "$(name)"
 
 $tag @e[tag=OS-bob] add OS-storedLocation-$(ID)-op
 #
 $scoreboard players set #OS-bob OS-storedLocation-$(ID)-operator 1
 
-$data modify storage onespin:locations stored_location.$(ID).dimension set from entity @s Dimension
+$data modify storage grenadier:locations stored_location.$(ID).dimension set from entity @s Dimension
 #
-$execute store result storage onespin:locations stored_location.$(ID).x int 1 run data get entity @s Pos[0]
+$execute store result storage grenadier:locations stored_location.$(ID).x int 1 run data get entity @s Pos[0]
 #
-$execute store result storage onespin:locations stored_location.$(ID).y int 1 run data get entity @s Pos[1]
+$execute store result storage grenadier:locations stored_location.$(ID).y int 1 run data get entity @s Pos[1]
 #
-$execute store result storage onespin:locations stored_location.$(ID).z int 1 run data get entity @s Pos[2]
+$execute store result storage grenadier:locations stored_location.$(ID).z int 1 run data get entity @s Pos[2]
 
 $tellraw @s ["Stored a new location named ",{"text":"$(name)","color":"green"}]

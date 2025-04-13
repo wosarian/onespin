@@ -16,16 +16,16 @@ execute if entity @s[scores={OS-permissionLevel=..1}] run return fail
 
 
 
-$execute unless data storage onespin:locations stored_location.$(ID) run tellraw @s ["",{"text":"A stored location with that ID couldn't be found","color":"red"}]
+$execute unless data storage grenadier:locations stored_location.$(ID) run tellraw @s ["",{"text":"A stored location with that ID couldn't be found","color":"red"}]
 #
-$execute unless data storage onespin:locations stored_location.$(ID) run return fail
+$execute unless data storage grenadier:locations stored_location.$(ID) run return fail
 
 
 # Remove the score required to check if player is operator.
 $scoreboard objectives remove OS-storedLocation-$(ID)-operator
 
 # Tell player that specified stored location has been unstored.
-$tellraw @s ["Unstored a location named ",{"storage":"onespin:locations","nbt":"stored_location.$(ID).name","color":"green"}]
+$tellraw @s ["Unstored a location named ",{"storage":"grenadier:locations","nbt":"stored_location.$(ID).name","color":"green"}]
 
 # The main command.
-$data remove storage onespin:locations stored_location.$(ID)
+$data remove storage grenadier:locations stored_location.$(ID)

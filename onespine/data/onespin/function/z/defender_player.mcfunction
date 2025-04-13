@@ -24,8 +24,8 @@ execute if entity @s[type=player,tag=!OS-creativeAllowed,gamemode=adventure] run
 
 # Send a warning to all operators if a player who is not an operator has operator utility item(s).
 
-execute if items entity @s[type=player,scores={OS-permissionLevel=..1}] container.* #onespin:operator_utilities run title @s[type=player,scores={OS-permissionLevel=3..}] times 0t 60t 0t
-execute if items entity @s[type=player,scores={OS-permissionLevel=..1}] container.* #onespin:operator_utilities run title @s[type=player,scores={OS-permissionLevel=3..}] subtitle [{"selector":"@s[type=player,scores={OS-permissionLevel=..1}]","color":"red","bold":true},{"text":" has an operator item!","color":"red","bold":true}]
-execute if items entity @s[type=player,scores={OS-permissionLevel=..1}] container.* #onespin:operator_utilities run title @s[type=player,scores={OS-permissionLevel=3..}] title {"text":"Alert!","color":"red","bold":true}
-execute unless items entity @s[type=player,scores={OS-permissionLevel=..1}] container.* #onespin:operator_utilities run title @s[type=player,scores={OS-permissionLevel=3..}] reset
+execute if items entity @s[type=player,scores={OS-permissionLevel=..1}] container.* #grenadier:operator_utilities run title @s[type=player,scores={OS-permissionLevel=3..}] times 0t 60t 0t
+execute if items entity @s[type=player,scores={OS-permissionLevel=..1}] container.* #grenadier:operator_utilities run title @s[type=player,scores={OS-permissionLevel=3..}] subtitle [{"selector":"@s[type=player,scores={OS-permissionLevel=..1}]","color":"red","bold":true},{"text":" has an operator item!","color":"red","bold":true}]
+execute if items entity @s[type=player,scores={OS-permissionLevel=..1}] container.* #grenadier:operator_utilities run title @s[type=player,scores={OS-permissionLevel=3..}] title {"text":"Alert!","color":"red","bold":true}
+execute unless items entity @s[type=player,scores={OS-permissionLevel=..1}] container.* #grenadier:operator_utilities run title @s[type=player,scores={OS-permissionLevel=3..}] reset
 

@@ -6,12 +6,12 @@
 
 # Stores all stored locations.
 
-execute store result score @n[tag=OS-bob] OS-storedLocations run data get storage onespin:locations stored_location
+execute store result score @n[tag=OS-bob] OS-storedLocations run data get storage grenadier:locations stored_location
 
 
-execute if score #OS-holder OS-forPlayerID <= #OS-lastID OS-playerID \ 
+execute if score #grenadier-main grenadier-forPlayerID <= #grenadier-lastID grenadier-playerID \ 
     as @a \ 
-        run function onespin:z/for_tick/player_by_id with storage onespin:players player.temp
+        run function onespin:z/for_tick/player_by_id with storage grenadier:players player.temp
 
 
 
@@ -20,7 +20,7 @@ execute if score #OS-holder OS-forPlayerID <= #OS-lastID OS-playerID \
 # Stop time if no players are in Survival nor SkyGames.
 
 execute as @a at @s \ 
-    unless predicate onespin:location/in_dimension/overworld \ 
+    unless predicate grenadier:location/in_dimension/overworld \ 
         unless predicate onespin:location/dimension/minigame_5 \ 
             unless predicate onespin:location/dimension/dimension_3 \
                 unless predicate onespin:location/dimension/dimension_0 \ 
@@ -28,7 +28,7 @@ execute as @a at @s \
 
 # Continue time if any player is in Survival or SkyGames.
 
-execute as @a[predicate=onespin:location/in_dimension/overworld] run gamerule doDaylightCycle true
+execute as @a[predicate=grenadier:location/in_dimension/overworld] run gamerule doDaylightCycle true
 
 execute as @a[predicate=onespin:location/dimension/minigame_5] run gamerule doDaylightCycle true
 
@@ -49,7 +49,7 @@ execute as @e[tag=OS-bob] in onespin:dimension_1 run tp @s -144 -59 79
 
 # Runs entity function for every living entity.
 
-execute as @e[type=!#onespin:non_living] \ 
+execute as @e[type=!#grenadier:non_living] \ 
     run function onespin:z/for_tick/entity
 
 # Runs OS-path function for every OS-path entity.
@@ -64,18 +64,18 @@ execute as @a \
 
 # Runs onespin Defender Entity Module for every explosive entity.
 
-execute as @e[type=#onespin:explosive] \ 
+execute as @e[type=#grenadier:explosive] \ 
     run function onespin:z/defender_entity
 
 # # Survival.
 
 # Runs pet_protection function for every tameable entity.
 
-execute as @e[type=#onespin:tameable,tag=!OS-4-petProtected] at @s if predicate onespin:location/in_dimension/any_minecraft \ 
-    if predicate onespin:entity/has_owner \
+execute as @e[type=#grenadier:tameable,tag=!OS-4-petProtected] at @s if predicate grenadier:location/in_dimension/any_minecraft \ 
+    if predicate grenadier:entity/has_owner \
         run function onespin:z/minigames/minigame_4/protect_pet_on_tame
 
 # Runs silence tagged animal function for every animal.
 
-execute as @e[type=!#onespin:non_living] at @s if predicate onespin:location/in_dimension/any_minecraft \ 
+execute as @e[type=!#grenadier:non_living] at @s if predicate grenadier:location/in_dimension/any_minecraft \ 
     run function onespin:z/minigames/minigame_4/silence_tagged_mob

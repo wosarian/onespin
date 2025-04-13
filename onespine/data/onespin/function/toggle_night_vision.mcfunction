@@ -12,12 +12,12 @@ execute if entity @s[type=!player] run return fail
 
 execute \ 
         at @s \ 
-                unless predicate onespin:location/in_dimension/any_minecraft \ 
+                unless predicate grenadier:location/in_dimension/any_minecraft \ 
                         if entity @s[scores={OS-permissionLevel=..1}] run \ 
                                 tellraw @s [{"text":"Requires minimum permission level to be 2 or more","color":"red"}]
 execute \ 
         at @s \ 
-                unless predicate onespin:location/in_dimension/any_minecraft \ 
+                unless predicate grenadier:location/in_dimension/any_minecraft \ 
                         if entity @s[scores={OS-permissionLevel=..1}] run \ 
                                 return fail
 

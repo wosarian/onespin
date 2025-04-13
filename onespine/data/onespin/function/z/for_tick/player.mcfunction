@@ -46,44 +46,48 @@ execute \
 
 
 
-# # Operators
+# # # Operators
+
+# # Permission Levels
 
 # Sets a permission level to wosarian.
 
 execute \ 
     unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
-        if score @s OS-playerID matches 1 \ 
+        if score @s grenadier-playerID matches 1 \ 
             run scoreboard players set @s OS-permissionLevel 4
 
 # Sets a permission level to spoockybro.
 
 execute \ 
     unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
-        if score @s OS-playerID matches 2 \ 
+        if score @s grenadier-playerID matches 2 \ 
             run scoreboard players set @s OS-permissionLevel 3
 
 # Sets a permission level to teratoph.
 
 execute \ 
     unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
-        if score @s OS-playerID matches 3 \ 
+        if score @s grenadier-playerID matches 3 \ 
             run scoreboard players set @s OS-permissionLevel 3
 
 # Sets a permission level to _Dere_.
 
 execute \ 
     unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
-        if score @s OS-playerID matches 4 \ 
+        if score @s grenadier-playerID matches 4 \ 
             run scoreboard players set @s OS-permissionLevel 3
 
 # Sets a permission level to _Shouly.
 
-execute unless score @s OS-permissionLevel = @s OS-permissionLevel if score @s OS-playerID matches 5 run scoreboard players set @s OS-permissionLevel 3
+execute unless score @s OS-permissionLevel = @s OS-permissionLevel if score @s grenadier-playerID matches 5 run scoreboard players set @s OS-permissionLevel 3
 
+
+# Sets a permission level to spoockybro (Bedrock).
 
 execute \ 
     unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
-        if score @s OS-playerID matches 6 \ 
+        if score @s grenadier-playerID matches 6 \ 
             run scoreboard players set @s OS-permissionLevel 3
 
 
@@ -103,13 +107,11 @@ tag @s remove OS-allowTeleportLocation
 tag @s remove OS-resetScoresFunction
 tag @s remove OS-pass-1
 tag @s remove OS-allowFallingTree
-clear @s[scores={OS-playerID=3..}] *[custom_data={"OS-skeletonKey":true}]
+clear @s[scores={grenadier-playerID=3..}] *[custom_data={"OS-skeletonKey":true}]
 
 tag @s[advancements={onespin:use_tagged_item=true}] add OS-taggedItemUsing
 tag @s[advancements={onespin:use_tagged_item=false}] remove OS-taggedItemUsing
 advancement revoke @s[tag=OS-taggedItemUsing] only onespin:use_tagged_item
-
-execute if predicate onespin:entity/player/has_input/sprint run scoreboard players set @s OS-playerInput-sprint 1
 
 
 
@@ -157,15 +159,15 @@ scoreboard players enable @s panel
 scoreboard players enable @s leaveSurvival
 
 
-execute at @s if entity @s[tag=!OS-4-locked] unless predicate onespin:location/in_dimension/any_minecraft run xp set @s 0 levels
-execute at @s if entity @s[tag=!OS-4-locked] unless predicate onespin:location/in_dimension/any_minecraft run xp set @s 0 points
+execute at @s if entity @s[tag=!OS-4-locked] unless predicate grenadier:location/in_dimension/any_minecraft run xp set @s 0 levels
+execute at @s if entity @s[tag=!OS-4-locked] unless predicate grenadier:location/in_dimension/any_minecraft run xp set @s 0 points
 
-execute at @s if entity @s[tag=OS-4-locked] if predicate onespin:location/in_dimension/any_minecraft run tag @s add OS-mod-fallingTree-allowed
-execute at @s if entity @s[tag=!OS-4-locked] unless predicate onespin:location/in_dimension/any_minecraft run tag @s remove OS-mod-fallingTree-allowed
+execute at @s if entity @s[tag=OS-4-locked] if predicate grenadier:location/in_dimension/any_minecraft run tag @s add OS-mod-fallingTree-allowed
+execute at @s if entity @s[tag=!OS-4-locked] unless predicate grenadier:location/in_dimension/any_minecraft run tag @s remove OS-mod-fallingTree-allowed
 
 
-#execute as @n[tag=ee] at @s if block ~ ~ ~ air store result storage onespin:players player.temp.ray int 1 run scoreboard players add wosarian raycast 1
-#execute as @n[tag=ee] at @s if block ~ ~ ~ air run function onespin:ray_move with storage onespin:players player.temp
+#execute as @n[tag=ee] at @s if block ~ ~ ~ air store result storage grenadier:players player.temp.ray int 1 run scoreboard players add wosarian raycast 1
+#execute as @n[tag=ee] at @s if block ~ ~ ~ air run function onespin:ray_move with storage grenadier:players player.temp
 #execute as @n[tag=ee] at @s unless block ~ ~ ~ air run data modify storage onespin:scores raycast.x set from entity @s Pos[0]
 #execute as @n[tag=ee] at @s unless block ~ ~ ~ air run data modify storage onespin:scores raycast.y set from entity @s Pos[1]
 #execute as @n[tag=ee] at @s unless block ~ ~ ~ air run data modify storage onespin:scores raycast.z set from entity @s Pos[2]
@@ -173,12 +175,12 @@ execute at @s if entity @s[tag=!OS-4-locked] unless predicate onespin:location/i
 
 # Survival
 # recipes
-execute at @s unless predicate onespin:location/in_dimension/any_minecraft run tag @s remove OS-4-defaultRecipesAllowed
-execute at @s if predicate onespin:location/in_dimension/any_minecraft run tag @s add OS-4-defaultRecipesAllowed
+execute at @s unless predicate grenadier:location/in_dimension/any_minecraft run tag @s remove OS-4-defaultRecipesAllowed
+execute at @s if predicate grenadier:location/in_dimension/any_minecraft run tag @s add OS-4-defaultRecipesAllowed
 recipe take @s[tag=!OS-4-defaultRecipesAllowed] *
 recipe give @s[tag=OS-4-defaultRecipesAllowed] *
 
-#execute as @s[tag=OS-4-lockedOut] at @s if predicate onespin:location/in_dimension/any_minecraft in onespin:dimension_2 run tp @s -271 57 29
+#execute as @s[tag=OS-4-lockedOut] at @s if predicate grenadier:location/in_dimension/any_minecraft in onespin:dimension_2 run tp @s -271 57 29
 
 
 execute at @s unless predicate onespin:location/dimension/minigame_5 run tag @s remove OS-5-inGame
@@ -189,7 +191,7 @@ effect give @s[tag=OS-5-inGame] saturation 2 255 true
 #207 63 2
 
 
-execute if entity @s[tag=OS-4-lockedOut,predicate=onespin:location/in_dimension/any_minecraft] in onespin:dimension_2 run tp @s -269 57 49
+execute if entity @s[tag=OS-4-lockedOut,predicate=grenadier:location/in_dimension/any_minecraft] in onespin:dimension_2 run tp @s -269 57 49
 
 
 
@@ -203,8 +205,8 @@ execute if entity @s[tag=OS-inLibrary] run effect give @s night_vision infinite 
 
 
 # You are the chosen one
-execute as @s[x=-145,y=-59,z=75.9,dx=1,dy=1,dz=0,scores={OS-playerID=1}] at @s in onespin:dimension_1 run tp @s ~ ~ 77
-execute as @s[x=-145,y=-59,z=76.1,dx=1,dy=1,dz=0,scores={OS-playerID=1}] at @s in onespin:dimension_1 run tp @s ~ ~ 75
+execute as @s[x=-145,y=-59,z=75.9,dx=1,dy=1,dz=0,scores={grenadier-playerID=1}] at @s in onespin:dimension_1 run tp @s ~ ~ 77
+execute as @s[x=-145,y=-59,z=76.1,dx=1,dy=1,dz=0,scores={grenadier-playerID=1}] at @s in onespin:dimension_1 run tp @s ~ ~ 75
 
 
 # Branches.
