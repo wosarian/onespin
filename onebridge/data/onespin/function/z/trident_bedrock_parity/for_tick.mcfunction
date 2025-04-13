@@ -1,1 +1,0 @@
-execute as @e[type=drowned,tag=!OS-drownedMainhandUpdated] at @s if predicate onespin:location/in_dimension/any_minecraft run function onespin:z/trident_bedrock_parity/update_drowned_mainhand
