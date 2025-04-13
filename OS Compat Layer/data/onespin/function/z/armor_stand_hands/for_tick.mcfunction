@@ -1,0 +1,1 @@
+execute as @e[type=armor_stand,tag=!OS-armorStandUpdated] at @s if predicate onespin:location/in_dimension/any_minecraft run function onespin:z/armor_stand_hands/update_armor_stand

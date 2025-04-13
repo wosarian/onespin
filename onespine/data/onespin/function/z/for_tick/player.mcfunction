@@ -81,6 +81,12 @@ execute \
 execute unless score @s OS-permissionLevel = @s OS-permissionLevel if score @s OS-playerID matches 5 run scoreboard players set @s OS-permissionLevel 3
 
 
+execute \ 
+    unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
+        if score @s OS-playerID matches 6 \ 
+            run scoreboard players set @s OS-permissionLevel 3
+
+
 
 # Constantly tries to add OS-creativeAllowed tag to operators.
 

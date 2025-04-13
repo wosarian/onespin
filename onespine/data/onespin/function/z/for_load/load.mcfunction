@@ -12,7 +12,7 @@ gamerule doMobLoot true
 gamerule doLimitedCrafting false
 gamerule doTraderSpawning true
 gamerule drowningDamage true
-gamerule forgiveDeadPlayers true
+gamerule forgiveDeadPlayers false
 gamerule showDeathMessages true
 gamerule spawnChunkRadius 0
 gamerule spawnRadius 0
