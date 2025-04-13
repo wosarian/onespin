@@ -1,1 +1,1 @@
-scoreboard objectives add OS-drownedMainhandRandom dummy
+scoreboard objectives add drownedMainhandRandom dummy
