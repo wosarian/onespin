@@ -1,0 +1,113 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cod",
+          "weight": 60
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:salmon",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:tropical_fish",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:pufferfish",
+          "weight": 13
+        }
+      ],
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:any_of",
+          "terms": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "dimension": "minecraft:overworld"
+                }
+              }
+            },
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "dimension": "minecraft:the_nether"
+                }
+              }
+            },
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "dimension": "minecraft:the_end"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 10,
+          "quality": -2,
+          "value": "minecraft:gameplay/fishing/junk"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 5,
+          "quality": 2,
+          "value": "minecraft:gameplay/fishing/treasure"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 85,
+          "quality": -1,
+          "value": "minecraft:gameplay/fishing/fish"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:any_of",
+          "terms": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "dimension": "minecraft:the_nether"
+              }
+            },
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "dimension": "minecraft:the_end"
+              }
+            },
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "dimension": "minecraft:overworld"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
