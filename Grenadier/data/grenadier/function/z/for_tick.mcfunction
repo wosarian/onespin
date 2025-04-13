@@ -11,7 +11,7 @@ execute if score #grenadier-main grenadier-forPlayerID < #grenadier-lastID grena
 
 execute if score #grenadier-main grenadier-forPlayerID <= #grenadier-lastID grenadier-playerID \ 
     as @a \ 
-        run function grenadier:z/for_tick/player_by_id with storage grenadier:players player.temp
+        run function #grenadier:runs_through_players_by_id with storage grenadier:players player.temp
 
 execute if score #grenadier-main grenadier-forPlayerID >= #grenadier-lastID grenadier-playerID \ 
     run scoreboard players set #grenadier-main grenadier-forPlayerID 0

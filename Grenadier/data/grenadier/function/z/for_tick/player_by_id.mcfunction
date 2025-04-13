@@ -1,8 +1,4 @@
 
-# Run functions through here with tag
-
-$execute as @s[scores={grenadier-playerID=$(ID)}] run function #grenadier:runs_through_player_id
-
 # Player data
 
 $data modify storage grenadier:players player.$(ID).ID set value $(ID)
