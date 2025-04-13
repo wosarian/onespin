@@ -6,14 +6,7 @@
 
 # Stores all stored locations.
 
-execute store result score @n[tag=OS-bob] OS-storedLocations run data get storage grenadier:locations stored_location
-
-
-execute if score #grenadier-main grenadier-forPlayerID <= #grenadier-lastID grenadier-playerID \ 
-    as @a \ 
-        run function onespin:z/for_tick/player_by_id with storage grenadier:players player.temp
-
-
+execute store result score @n[tag=OS-bob] OS-storedLocations run data get storage onespin:locations stored_location
 
 # # Time won't continue if no player is found in one of these dimensions.
 

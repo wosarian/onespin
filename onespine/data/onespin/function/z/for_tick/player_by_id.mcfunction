@@ -33,7 +33,6 @@ $execute \
         function onespin:z/print_control_panel with storage grenadier:players player.temp
 
 
-
 # # Branches.
 
 # Minigame: Survival branches.
@@ -53,3 +52,11 @@ $execute \
 $execute \ 
     as @s[scores={grenadier-playerID=$(ID)}] run \ 
         function onespin:z/minigames/minigame_5/save_location with storage grenadier:players player.temp
+
+
+$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow = @s OS-rainbow run scoreboard players add @s OS-rainbow 1
+$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 1..10 run team modify OS-player-$(ID) color yellow
+$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 11..20 run team modify OS-player-$(ID) color red
+$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 21..30 run team modify OS-player-$(ID) color blue
+$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 31..40 run team modify OS-player-$(ID) color green
+$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 41.. run scoreboard players set @s OS-rainbow 1
