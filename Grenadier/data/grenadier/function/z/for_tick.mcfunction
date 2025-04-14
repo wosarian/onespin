@@ -3,18 +3,21 @@
 
 execute as @a unless score @s grenadier-playerID = @s grenadier-playerID store result score @s grenadier-playerID run scoreboard players add #grenadier-lastID grenadier-playerID 1
 
-# Run grenadier:z/for_tick/player_by_id for every existing player ID
+# Run functions with tag #grenadier-main grenadier-onlinePlayers for every existing player by ID
 
-execute if score #grenadier-main grenadier-forPlayerID < #grenadier-lastID grenadier-playerID \ 
-    store result storage grenadier:players player.temp.ID int 1 \ 
-        run scoreboard players add #grenadier-main grenadier-forPlayerID 1
+execute \ 
+    if score #grenadier-main grenadier-forPlayerID < #grenadier-lastID grenadier-playerID \ 
+        store result storage grenadier:temp temp.ID int 1 \ 
+            run scoreboard players add #grenadier-main grenadier-forPlayerID 1
 
-execute if score #grenadier-main grenadier-forPlayerID <= #grenadier-lastID grenadier-playerID \ 
-    as @a \ 
-        run function #grenadier:runs_through_players_by_id with storage grenadier:players player.temp
+execute \ 
+    if score #grenadier-main grenadier-forPlayerID <= #grenadier-lastID grenadier-playerID \ 
+        as @a \ 
+            run function #grenadier:runs_through_players_by_id with storage grenadier:temp temp
 
-execute if score #grenadier-main grenadier-forPlayerID >= #grenadier-lastID grenadier-playerID \ 
-    run scoreboard players set #grenadier-main grenadier-forPlayerID 0
+execute \ 
+        if score #grenadier-main grenadier-forPlayerID >= #grenadier-lastID grenadier-playerID \  
+            run scoreboard players set #grenadier-main grenadier-forPlayerID 0
 
 # Counters
 

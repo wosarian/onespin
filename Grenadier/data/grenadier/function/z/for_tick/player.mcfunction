@@ -5,6 +5,11 @@ execute store result score @s grenadier-playerMaxHealth run attribute @s minecra
 scoreboard players operation @s grenadier-playerDamage = @s grenadier-playerMaxHealth
 execute store result score @s grenadier-playerDamage \ 
     run scoreboard players operation @s grenadier-playerDamage -= @s grenadier-playerHealth
+execute store result score @s grenadier-playerX run data get entity @s Pos[0] 1
+execute store result score @s grenadier-playerY run data get entity @s Pos[1] 1
+execute store result score @s grenadier-playerZ run data get entity @s Pos[2] 1
+execute store result score @s grenadier-playerPitch run data get entity @s Rotation[0] 1
+execute store result score @s grenadier-playerYaw run data get entity @s Rotation[1] 1
 
 # Playtime
 

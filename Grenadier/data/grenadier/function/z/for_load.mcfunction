@@ -27,6 +27,9 @@ scoreboard players set #grenadier-main grenadier-const-0 0
 scoreboard objectives add grenadier-const-15 dummy
 scoreboard objectives modify grenadier-const-15 displayname {"text": "Constant 15"}
 scoreboard players set #grenadier-main grenadier-const-15 15
+scoreboard objectives add grenadier-const-5 dummy
+scoreboard objectives modify grenadier-const-5 displayname {"text": "Constant 5"}
+scoreboard players set #grenadier-main grenadier-const-5 5
 
 # Counters
 

@@ -6,6 +6,8 @@ $team add OS-player-$(ID)
 $team join OS-player-$(ID) @s[scores={grenadier-playerID=$(ID)},team=!OS-1-team]
 
 
+
+
 $execute \ 
     as @s[tag=OS-4-locked,scores={grenadier-playerID=$(ID)}] \ 
         at @s \ 
@@ -55,8 +57,9 @@ $execute \
 
 
 $execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow = @s OS-rainbow run scoreboard players add @s OS-rainbow 1
-$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 1..2 run team modify OS-player-$(ID) color yellow
-$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 3..4 run team modify OS-player-$(ID) color red
-$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 5..6 run team modify OS-player-$(ID) color blue
-$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 7..8 run team modify OS-player-$(ID) color green
-$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 9.. run scoreboard players set @s OS-rainbow 1
+$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 1..5 run team modify OS-player-$(ID) color yellow
+$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 6..10 run team modify OS-player-$(ID) color red
+$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 11..15 run team modify OS-player-$(ID) color blue
+$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 16..20 run team modify OS-player-$(ID) color green
+$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 21..25 run team modify OS-player-$(ID) color light_purple
+$execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow matches 25.. run scoreboard players set @s OS-rainbow 1
