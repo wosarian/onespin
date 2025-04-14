@@ -1,0 +1,2 @@
+
+function #grenadier:runs_for_player_on_first_join

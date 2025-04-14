@@ -1,6 +1,7 @@
 
 # Main
 
+forceload add 0 0
 scoreboard objectives add grenadier-playerID dummy
 scoreboard objectives modify grenadier-playerID displayname {"text": "Player ID"}
 scoreboard objectives add grenadier-forPlayerID dummy
@@ -68,6 +69,17 @@ scoreboard objectives add grenadier-playerY dummy
 scoreboard objectives modify grenadier-playerY displayname {"text": "Player Y Coordinate"}
 scoreboard objectives add grenadier-playerZ dummy
 scoreboard objectives modify grenadier-playerZ displayname {"text": "Player Z Coordinate"}
+scoreboard objectives add grenadier-playerXPLevels dummy
+scoreboard objectives modify grenadier-playerXPLevels displayname {"text": "Player XP Levels"}
+scoreboard objectives add grenadier-playerXPPoints dummy
+scoreboard objectives modify grenadier-playerXPPoints displayname {"text": "Player XP Points"}
+scoreboard objectives add grenadier-playerRespawnX dummy
+scoreboard objectives modify grenadier-playerRespawnX displayname {"text": "Player Respawn X Coordinate"}
+scoreboard objectives add grenadier-playerRespawnY dummy
+scoreboard objectives modify grenadier-playerRespawnY displayname {"text": "Player Respawn Y Coordinate"}
+scoreboard objectives add grenadier-playerRespawnZ dummy
+scoreboard objectives modify grenadier-playerRespawnZ displayname {"text": "Player Respawn Z Coordinate"}
+
 
 # Playtime
 

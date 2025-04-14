@@ -26,9 +26,9 @@ execute \
 
 # Tests if there are stored locations to list and returns the function if false.
 
-execute unless data storage grenadier:locations stored_location run tellraw @s ["",{"text":"There are no stored locations to list","color":"red"}]
-execute unless data storage grenadier:locations stored_location run scoreboard players reset @s warplist
-execute unless data storage grenadier:locations stored_location run return fail
+execute unless data storage onespin:locations stored_location run tellraw @s ["",{"text":"There are no stored locations to list","color":"red"}]
+execute unless data storage onespin:locations stored_location run scoreboard players reset @s warplist
+execute unless data storage onespin:locations stored_location run return fail
 
 
 

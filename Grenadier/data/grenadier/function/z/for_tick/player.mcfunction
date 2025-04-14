@@ -10,6 +10,11 @@ execute store result score @s grenadier-playerY run data get entity @s Pos[1] 1
 execute store result score @s grenadier-playerZ run data get entity @s Pos[2] 1
 execute store result score @s grenadier-playerPitch run data get entity @s Rotation[0] 1
 execute store result score @s grenadier-playerYaw run data get entity @s Rotation[1] 1
+execute store result score @s grenadier-playerXPPoints run xp query @s points
+execute store result score @s grenadier-playerXPLevels run xp query @s levels
+execute store result score @s grenadier-playerRespawnX run data get entity @s respawn.pos[0]
+execute store result score @s grenadier-playerRespawnY run data get entity @s respawn.pos[1]
+execute store result score @s grenadier-playerRespawnZ run data get entity @s respawn.pos[2]
 
 # Playtime
 

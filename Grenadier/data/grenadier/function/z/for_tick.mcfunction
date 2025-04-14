@@ -1,8 +1,4 @@
 
-# Main
-
-execute as @a unless score @s grenadier-playerID = @s grenadier-playerID store result score @s grenadier-playerID run scoreboard players add #grenadier-lastID grenadier-playerID 1
-
 # Run functions with tag #grenadier-main grenadier-onlinePlayers for every existing player by ID
 
 execute \ 
