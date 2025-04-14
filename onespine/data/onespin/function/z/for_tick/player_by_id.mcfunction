@@ -32,7 +32,7 @@ $scoreboard players reset @s[scores={grenadier-playerID=$(ID),OS-coordinatesUpda
 
 $execute \ 
     as @s[scores={grenadier-playerID=$(ID),panel=1}] run \ 
-        function onespin:z/print_control_panel with storage grenadier:players player.temp
+        function onespin:z/print_control_panel with storage grenadier:temp temp
 
 
 # # Branches.
@@ -41,19 +41,19 @@ $execute \
 
 $execute \ 
     as @s[scores={grenadier-playerID=$(ID)}] run \ 
-        function onespin:z/minigames/minigame_4/joining with storage grenadier:players player.temp
+        function onespin:z/minigames/minigame_4/joining with storage grenadier:temp temp
 $execute \ 
     as @s[scores={grenadier-playerID=$(ID)}] run \ 
-        function onespin:z/minigames/minigame_4/autosave with storage grenadier:players player.temp
+        function onespin:z/minigames/minigame_4/autosave with storage grenadier:temp temp
 $execute \ 
     as @s[scores={grenadier-playerID=$(ID)}] run \ 
-        function onespin:z/minigames/minigame_4/leaving with storage grenadier:players player.temp
+        function onespin:z/minigames/minigame_4/leaving with storage grenadier:temp temp
 
 # Minigame: SkyGames branches.
 
 $execute \ 
     as @s[scores={grenadier-playerID=$(ID)}] run \ 
-        function onespin:z/minigames/minigame_5/save_location with storage grenadier:players player.temp
+        function onespin:z/minigames/minigame_5/save_location with storage grenadier:temp temp
 
 
 $execute as @s[scores={grenadier-playerID=$(ID)}] if score @s OS-rainbow = @s OS-rainbow run scoreboard players add @s OS-rainbow 1

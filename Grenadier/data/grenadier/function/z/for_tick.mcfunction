@@ -1,4 +1,8 @@
 
+# 
+# IDEA: Use markers to teleport players
+# 
+
 # Run functions with tag #grenadier-main grenadier-onlinePlayers for every existing player by ID
 
 execute \ 
