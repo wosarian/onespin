@@ -1,5 +1,5 @@
 
-execute store result score @s villagerNameRandom run random value 1..101
+execute store result score @s villagerNameRandom run random value 1..107
 
 execute if score @s villagerNameRandom matches 1 run data merge entity @s {CustomName:[{text:"Yulif",italic:false}]}
 execute if score @s villagerNameRandom matches 2 run data merge entity @s {CustomName:[{text:"Elon",italic:false}]}
@@ -102,5 +102,11 @@ execute if score @s villagerNameRandom matches 98 run data merge entity @s {Cust
 execute if score @s villagerNameRandom matches 99 run data merge entity @s {CustomName:[{text:"Gandalf",italic:false}]}
 execute if score @s villagerNameRandom matches 100 run data merge entity @s {CustomName:[{text:"Frodo",italic:false}]}
 execute if score @s villagerNameRandom matches 101 run data merge entity @s {CustomName:[{text:"Brandon",italic:false}]}
+execute if score @s villagerNameRandom matches 102 run data merge entity @s {CustomName:[{text:"Thanos",italic:false}]}
+execute if score @s villagerNameRandom matches 103 run data merge entity @s {CustomName:[{text:"Chris",italic:false}]}
+execute if score @s villagerNameRandom matches 104 run data merge entity @s {CustomName:[{text:"Sabrina",italic:false}]}
+execute if score @s villagerNameRandom matches 105 run data merge entity @s {CustomName:[{text:"Taylor",italic:false}]}
+execute if score @s villagerNameRandom matches 106 run data merge entity @s {CustomName:[{text:"Avril",italic:false}]}
+execute if score @s villagerNameRandom matches 107 run data merge entity @s {CustomName:[{text:"Rosamunde",italic:false}]}
 
 tag @s add villagerNamed
