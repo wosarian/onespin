@@ -1,5 +1,71 @@
 
-#execute store result score @s villagerNameRandom run random value 1..100
+execute store result score @s villagerNameRandom run random value 1..66
 
-#execute if score @s villagerNameRandom matches 1 run data merge entity @s {CustomName:[{text:"Yulif",italic:false}]}
-#execute if score @s villagerNameRandom matches 2 run data merge entity @s {CustomName:[{text:"",italic:false}]}
+execute if score @s villagerNameRandom matches 1 run data merge entity @s {CustomName:[{text:"Yulif",italic:false}]}
+execute if score @s villagerNameRandom matches 2 run data merge entity @s {CustomName:[{text:"Elon",italic:false}]}
+execute if score @s villagerNameRandom matches 3 run data merge entity @s {CustomName:[{text:"Donald",italic:false}]}
+execute if score @s villagerNameRandom matches 4 run data merge entity @s {CustomName:[{text:"Adolf",italic:false}]}
+execute if score @s villagerNameRandom matches 5 run data merge entity @s {CustomName:[{text:"Friedrich",italic:false}]}
+execute if score @s villagerNameRandom matches 6 run data merge entity @s {CustomName:[{text:"Felix",italic:false}]}
+execute if score @s villagerNameRandom matches 7 run data merge entity @s {CustomName:[{text:"Ashley",italic:false}]}
+execute if score @s villagerNameRandom matches 8 run data merge entity @s {CustomName:[{text:"Lucas",italic:false}]}
+execute if score @s villagerNameRandom matches 9 run data merge entity @s {CustomName:[{text:"James",italic:false}]}
+execute if score @s villagerNameRandom matches 10 run data merge entity @s {CustomName:[{text:"Phoebe",italic:false}]}
+execute if score @s villagerNameRandom matches 11 run data merge entity @s {CustomName:[{text:"Noah",italic:false}]}
+execute if score @s villagerNameRandom matches 12 run data merge entity @s {CustomName:[{text:"Caleb",italic:false}]}
+execute if score @s villagerNameRandom matches 13 run data merge entity @s {CustomName:[{text:"Wendy",italic:false}]}
+execute if score @s villagerNameRandom matches 14 run data merge entity @s {CustomName:[{text:"William",italic:false}]}
+execute if score @s villagerNameRandom matches 15 run data merge entity @s {CustomName:[{text:"Michael",italic:false}]}
+execute if score @s villagerNameRandom matches 16 run data merge entity @s {CustomName:[{text:"Roman",italic:false}]}
+execute if score @s villagerNameRandom matches 17 run data merge entity @s {CustomName:[{text:"Alexandr",italic:false}]}
+execute if score @s villagerNameRandom matches 18 run data merge entity @s {CustomName:[{text:"Pyotr",italic:false}]}
+execute if score @s villagerNameRandom matches 19 run data merge entity @s {CustomName:[{text:"Boris",italic:false}]}
+execute if score @s villagerNameRandom matches 20 run data merge entity @s {CustomName:[{text:"Chloe",italic:false}]}
+execute if score @s villagerNameRandom matches 21 run data merge entity @s {CustomName:[{text:"Ethan",italic:false}]}
+execute if score @s villagerNameRandom matches 22 run data merge entity @s {CustomName:[{text:"Mark",italic:false}]}
+execute if score @s villagerNameRandom matches 23 run data merge entity @s {CustomName:[{text:"Carl",italic:false}]}
+execute if score @s villagerNameRandom matches 24 run data merge entity @s {CustomName:[{text:"Kevin",italic:false}]}
+execute if score @s villagerNameRandom matches 25 run data merge entity @s {CustomName:[{text:"Stephen",italic:false}]}
+execute if score @s villagerNameRandom matches 26 run data merge entity @s {CustomName:[{text:"Alex",italic:false}]}
+execute if score @s villagerNameRandom matches 27 run data merge entity @s {CustomName:[{text:"Jude",italic:false}]}
+execute if score @s villagerNameRandom matches 28 run data merge entity @s {CustomName:[{text:"Thomas",italic:false}]}
+execute if score @s villagerNameRandom matches 29 run data merge entity @s {CustomName:[{text:"Lydia",italic:false}]}
+execute if score @s villagerNameRandom matches 30 run data merge entity @s {CustomName:[{text:"Isaac",italic:false}]}
+execute if score @s villagerNameRandom matches 31 run data merge entity @s {CustomName:[{text:"Delilah",italic:false}]}
+execute if score @s villagerNameRandom matches 32 run data merge entity @s {CustomName:[{text:"Carl",italic:false}]}
+execute if score @s villagerNameRandom matches 33 run data merge entity @s {CustomName:[{text:"Jesus",italic:false}]}
+execute if score @s villagerNameRandom matches 34 run data merge entity @s {CustomName:[{text:"Simon",italic:false}]}
+execute if score @s villagerNameRandom matches 35 run data merge entity @s {CustomName:[{text:"Benjamin",italic:false}]}
+execute if score @s villagerNameRandom matches 36 run data merge entity @s {CustomName:[{text:"Gabriel",italic:false}]}
+execute if score @s villagerNameRandom matches 37 run data merge entity @s {CustomName:[{text:"Naomi",italic:false}]}
+execute if score @s villagerNameRandom matches 38 run data merge entity @s {CustomName:[{text:"Abigail",italic:false}]}
+execute if score @s villagerNameRandom matches 39 run data merge entity @s {CustomName:[{text:"David",italic:false}]}
+execute if score @s villagerNameRandom matches 40 run data merge entity @s {CustomName:[{text:"Lucifer",italic:false}]}
+execute if score @s villagerNameRandom matches 41 run data merge entity @s {CustomName:[{text:"Adam",italic:false}]}
+execute if score @s villagerNameRandom matches 42 run data merge entity @s {CustomName:[{text:"Eve",italic:false}]}
+execute if score @s villagerNameRandom matches 43 run data merge entity @s {CustomName:[{text:"Hannah",italic:false}]}
+execute if score @s villagerNameRandom matches 44 run data merge entity @s {CustomName:[{text:"Kylie",italic:false}]}
+execute if score @s villagerNameRandom matches 45 run data merge entity @s {CustomName:[{text:"Kate",italic:false}]}
+execute if score @s villagerNameRandom matches 46 run data merge entity @s {CustomName:[{text:"Debora",italic:false}]}
+execute if score @s villagerNameRandom matches 47 run data merge entity @s {CustomName:[{text:"Joseph",italic:false}]}
+execute if score @s villagerNameRandom matches 48 run data merge entity @s {CustomName:[{text:"Isaiah",italic:false}]}
+execute if score @s villagerNameRandom matches 49 run data merge entity @s {CustomName:[{text:"Johnny",italic:false}]}
+execute if score @s villagerNameRandom matches 50 run data merge entity @s {CustomName:[{text:"Max",italic:false}]}
+execute if score @s villagerNameRandom matches 51 run data merge entity @s {CustomName:[{text:"Madonna",italic:false}]}
+execute if score @s villagerNameRandom matches 52 run data merge entity @s {CustomName:[{text:"Matthew",italic:false}]}
+execute if score @s villagerNameRandom matches 53 run data merge entity @s {CustomName:[{text:"Sarah",italic:false}]}
+execute if score @s villagerNameRandom matches 54 run data merge entity @s {CustomName:[{text:"Lucius",italic:false}]}
+execute if score @s villagerNameRandom matches 55 run data merge entity @s {CustomName:[{text:"Sean",italic:false}]}
+execute if score @s villagerNameRandom matches 56 run data merge entity @s {CustomName:[{text:"Jesse",italic:false}]}
+execute if score @s villagerNameRandom matches 57 run data merge entity @s {CustomName:[{text:"Ruth",italic:false}]}
+execute if score @s villagerNameRandom matches 58 run data merge entity @s {CustomName:[{text:"Philip",italic:false}]}
+execute if score @s villagerNameRandom matches 59 run data merge entity @s {CustomName:[{text:"Kobe",italic:false}]}
+execute if score @s villagerNameRandom matches 60 run data merge entity @s {CustomName:[{text:"Lionel",italic:false}]}
+execute if score @s villagerNameRandom matches 61 run data merge entity @s {CustomName:[{text:"Ronaldo",italic:false}]}
+execute if score @s villagerNameRandom matches 62 run data merge entity @s {CustomName:[{text:"Jonathan",italic:false}]}
+execute if score @s villagerNameRandom matches 63 run data merge entity @s {CustomName:[{text:"Uma",italic:false}]}
+execute if score @s villagerNameRandom matches 64 run data merge entity @s {CustomName:[{text:"Abel",italic:false}]}
+execute if score @s villagerNameRandom matches 65 run data merge entity @s {CustomName:[{text:"Rachel",italic:false}]}
+execute if score @s villagerNameRandom matches 66 run data merge entity @s {CustomName:[{text:"Charlie",italic:false}]}
+
+tag @s add villagerNamed
