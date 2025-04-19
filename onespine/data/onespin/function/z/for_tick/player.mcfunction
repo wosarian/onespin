@@ -24,7 +24,7 @@ execute \
         tag @s add OS-4-lockedOut
 execute \ 
     if entity @s[tag=!OS-firstJoined] run \ 
-        scoreboard players set @s OS-dynamic-15 15
+        scoreboard players set @s OS-dynamic-10 10
 execute \ 
     if entity @s[tag=!OS-firstJoined] run \ 
         tag @s add OS-firstJoined

@@ -1,9 +1,9 @@
 {
-    "type": "onespin:default",
+    "type": "onespin:dimension_3_type",
     "generator": {
         "type": "minecraft:flat",
         "settings": {
-            "biome": "onespin:default",
+            "biome": "onespin:dimension_3_biome",
             "lakes": false,
             "features": false,
             "layers": [

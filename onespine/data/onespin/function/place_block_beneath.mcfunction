@@ -7,11 +7,11 @@ execute if entity @s[type=!player] run \
         return fail
 
 
-# Tests if the executing player has the required minimum permission level and returns the function if false.
+# Tests if the executing player has the OS-creativeAllowed tag and returns the function if false.
 
-execute if entity @s[scores={OS-permissionLevel=..1}] run \ 
-        tellraw @s [{"text":"Requires minimum permission level to be 2 or more","color":"red"}]
-execute if entity @s[scores={OS-permissionLevel=..1}] run \ 
+execute if entity @s[tag=!OS-creativeAllowed] run \ 
+        tellraw @s [{"text":"Requires creative mode","color":"red"}]
+execute if entity @s[tag=!OS-creativeAllowed] run \ 
         return fail
 
 

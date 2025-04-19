@@ -4,9 +4,6 @@
 forceload add 0 0
 scoreboard objectives add grenadier-playerID dummy
 scoreboard objectives modify grenadier-playerID displayname {"text": "Player ID"}
-scoreboard objectives add grenadier-forPlayerID dummy
-scoreboard objectives modify grenadier-forPlayerID displayname {"text": "For Every Player ID"}
-scoreboard players add #grenadier-main grenadier-forPlayerID 0
 
 # Constants
 
@@ -28,6 +25,9 @@ scoreboard players set #grenadier-main grenadier-const-0 0
 scoreboard objectives add grenadier-const-15 dummy
 scoreboard objectives modify grenadier-const-15 displayname {"text": "Constant 15"}
 scoreboard players set #grenadier-main grenadier-const-15 15
+scoreboard objectives add grenadier-const-10 dummy
+scoreboard objectives modify grenadier-const-10 displayname {"text": "Constant 10"}
+scoreboard players set #grenadier-main grenadier-const-10 10
 scoreboard objectives add grenadier-const-5 dummy
 scoreboard objectives modify grenadier-const-5 displayname {"text": "Constant 5"}
 scoreboard players set #grenadier-main grenadier-const-5 5

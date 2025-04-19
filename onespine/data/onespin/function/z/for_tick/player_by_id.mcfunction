@@ -25,11 +25,6 @@ $execute \
     as @s[x=-14999992,y=-66,z=-14999992,dx=29999984,dy=-29999933,dz=29999984,scores={grenadier-playerID=$(ID)}] run \ 
         function onespin:z/teleport with storage grenadier:players player.$(ID).spawnpoint
 
-$scoreboard players add @s[scores={grenadier-playerID=$(ID)}] OS-coordinatesUpdateDelay 1
-$execute as @s[scores={grenadier-playerID=$(ID),OS-coordinatesUpdateDelay=5..},name=!wosarian,tag=!OS-3-inGame,tag=!OS-1-inGame] at @s if predicate grenadier:location/in_dimension/any_minecraft run title @s actionbar [ { "text": "X: ", "color": "red" }, { "score": { "objective": "grenadier-playerX", "name": "*" }, "color": "red" }, { "text": " | ", "color": "white" }, { "text": "Y: ", "color": "green" }, { "score": { "objective": "grenadier-playerY", "name": "*" }, "color": "green" }, { "text": " | ", "color": "white" }, { "text": "Z: ", "color": "aqua" }, { "score": { "objective": "grenadier-playerZ", "name": "*" }, "color": "aqua" }]
-$title @s[scores={grenadier-playerID=$(ID),OS-coordinatesUpdateDelay=5..},name=wosarian,tag=!OS-3-inGame,tag=!OS-1-inGame] actionbar [ { "text": "X: ", "color": "red" }, { "score": { "objective": "grenadier-playerX", "name": "*" }, "color": "red" }, { "text": " | ", "color": "white" }, { "text": "Y: ", "color": "green" }, { "score": { "objective": "grenadier-playerY", "name": "*" }, "color": "green" }, { "text": " | ", "color": "white" }, { "text": "Z: ", "color": "aqua" }, { "score": { "objective": "grenadier-playerZ", "name": "*" }, "color": "aqua" }, { "text": " | ", "color": "white" }, { "score": { "objective": "grenadier-playerID", "name": "#grenadier-lastID" }, "color": "light_purple" }]
-$scoreboard players reset @s[scores={grenadier-playerID=$(ID),OS-coordinatesUpdateDelay=5..}] OS-coordinatesUpdateDelay
-
 $execute \ 
     as @s[scores={grenadier-playerID=$(ID),panel=1}] run \ 
         function onespin:z/print_control_panel with storage grenadier:temp temp

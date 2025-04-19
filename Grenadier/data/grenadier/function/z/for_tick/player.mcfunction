@@ -1,4 +1,9 @@
 
+# Run functions with tag #grenadier-main grenadier-onlinePlayers for every existing player by ID
+
+execute store result storage grenadier:temp temp.ID int 1 run scoreboard players get * grenadier-playerID
+execute as @s run function #grenadier:runs_through_players_by_id with storage grenadier:temp temp
+
 # Players
 
 execute store result score @s grenadier-playerMaxHealth run attribute @s minecraft:max_health get 1

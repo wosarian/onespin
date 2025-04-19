@@ -1,24 +1,4 @@
 
-# 
-# IDEA: Use markers to teleport players
-# 
-
-# Run functions with tag #grenadier-main grenadier-onlinePlayers for every existing player by ID
-
-execute \ 
-    if score #grenadier-main grenadier-forPlayerID < #grenadier-lastID grenadier-playerID \ 
-        store result storage grenadier:temp temp.ID int 1 \ 
-            run scoreboard players add #grenadier-main grenadier-forPlayerID 1
-
-execute \ 
-    if score #grenadier-main grenadier-forPlayerID <= #grenadier-lastID grenadier-playerID \ 
-        as @a \ 
-            run function #grenadier:runs_through_players_by_id with storage grenadier:temp temp
-
-execute \ 
-        if score #grenadier-main grenadier-forPlayerID >= #grenadier-lastID grenadier-playerID \  
-            run scoreboard players set #grenadier-main grenadier-forPlayerID 0
-
 # Counters
 
 execute store result score #grenadier-main grenadier-loadedMobs if entity @e[type=!#grenadier:non_living,type=!player]

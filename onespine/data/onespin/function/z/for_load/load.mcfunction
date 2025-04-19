@@ -76,7 +76,6 @@ scoreboard objectives add OS-debug dummy
 scoreboard objectives add OS-nv-toggle dummy
 scoreboard objectives add OS-limboLevel dummy
 scoreboard objectives add OS-RTCResetDelay dummy
-scoreboard objectives add OS-coordinatesUpdateDelay dummy
 
 # Counters
 
@@ -104,20 +103,30 @@ scoreboard objectives add OS-3-health dummy
 # Triggers
 
 scoreboard objectives add leaveSurvival trigger
+scoreboard objectives modify leaveSurvival displayname {"text": "Leave Minigame: Survival"}
 scoreboard objectives add skygamesSave trigger
+scoreboard objectives modify skygamesSave displayname {"text": "Minigame: SkyGames - Save"}
 scoreboard objectives add warplist trigger
+scoreboard objectives modify warplist displayname {"text": "Print All Stored Locations"}
 scoreboard objectives add warp trigger
+scoreboard objectives modify warp displayname {"text": "Teleport To A Stored Location"}
 scoreboard objectives add b trigger
+scoreboard objectives modify b displayname {"text": "Creative - Place A Block Below"}
 scoreboard objectives add sptool trigger
+scoreboard objectives modify sptool displayname {"text": "Operator - Give Spectator Tool"}
 scoreboard objectives add sword trigger
+scoreboard objectives modify sword displayname {"text": "Operator - Give Executioner Sword"}
 scoreboard objectives add nv trigger
+scoreboard objectives modify nv displayname {"text": "Toggle Night Vision"}
 scoreboard objectives add lobby trigger
+scoreboard objectives modify lobby displayname {"text": "Teleport To Lobby"}
 scoreboard objectives add panel trigger
+scoreboard objectives modify panel displayname {"text": "Show Control Panel"}
 
 # For warplist trigger
 
-scoreboard objectives add OS-dynamic-15 dummy
-scoreboard objectives modify OS-dynamic-15 displayname {"text": "Dynamic 15"}
+scoreboard objectives add OS-dynamic-10 dummy
+scoreboard objectives modify OS-dynamic-10 displayname {"text": "Dynamic 10"}
 scoreboard objectives add OS-forStoredLocation dummy
 scoreboard objectives modify OS-forStoredLocation displayname {"text": "For Every Stored Location"}
 
@@ -138,6 +147,7 @@ scoreboard objectives remove OS-playerInput-sprint
 scoreboard objectives remove OS-tickSpeed
 scoreboard objectives remove OS-forID
 scoreboard objectives remove OSID
+scoreboard objectives remove OS-coordinatesUpdateDelay
 
 # Survival
 

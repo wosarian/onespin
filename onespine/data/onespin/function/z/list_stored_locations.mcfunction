@@ -40,23 +40,25 @@ execute if entity @s[tag=!OS-listStoredLocations-start] run scoreboard players s
 
 # Prints the first line.
 
-execute if entity @s[tag=!OS-listStoredLocations-start] run tellraw @s ["------------- ",{"text":"Stored Locations","color":"aqua","bold":true}," | ",{"text":"Page","color":"green"},": ",{"color":"white","score":{"objective":"warplist","name":"@s"}}," -------------"]
+execute if entity @s[tag=!OS-listStoredLocations-start] run tellraw @s {"text":"                                                                                ","color":"dark_gray","strikethrough":true}
+execute if entity @s[tag=!OS-listStoredLocations-start] run tellraw @s ["                      Stored Locations",{text:" / ",color:gray},"Page: ",{"color":"white","score":{"objective":"warplist","name":"@s"}}]
+execute if entity @s[tag=!OS-listStoredLocations-start] run tellraw @s {"text":"                                                                                ","color":"dark_gray","strikethrough":true}
 
 # Sets Dynamic-15 to 15 incase player is using this function the first time.
 
-execute if entity @s[tag=!OS-listStoredLocations-start] run scoreboard players set @s OS-dynamic-15 15
+execute if entity @s[tag=!OS-listStoredLocations-start] run scoreboard players set @s OS-dynamic-10 10
 
 # Multiplies dynamic-15 by the warplist you input. Dynamic-15 represents the ID of the last stored location on 1 page.
 
-execute if entity @s[tag=!OS-listStoredLocations-start] store result score @s OS-dynamic-15 run scoreboard players operation @s OS-dynamic-15 *= @s warplist
+execute if entity @s[tag=!OS-listStoredLocations-start] store result score @s OS-dynamic-10 run scoreboard players operation @s OS-dynamic-10 *= @s warplist
 
 # Adds dynamic-15 to forStoredLocation.
 
-execute if entity @s[tag=!OS-listStoredLocations-start] store result score @s OS-forStoredLocation run scoreboard players operation @s OS-forStoredLocation += @s OS-dynamic-15
+execute if entity @s[tag=!OS-listStoredLocations-start] store result score @s OS-forStoredLocation run scoreboard players operation @s OS-forStoredLocation += @s OS-dynamic-10
 
 # Removes constant 15 from forStoredLocation so it doesn't start to print locations from location with ID 1, but the first location on the selected page.
 
-execute if entity @s[tag=!OS-listStoredLocations-start] store result score @s OS-forStoredLocation run scoreboard players operation @s OS-forStoredLocation -= #grenadier-main grenadier-const-15
+execute if entity @s[tag=!OS-listStoredLocations-start] store result score @s OS-forStoredLocation run scoreboard players operation @s OS-forStoredLocation -= #grenadier-main grenadier-const-10
 
 
 execute if entity @s[tag=!OS-listStoredLocations-start] run tag @s add OS-listStoredLocations-start
@@ -66,9 +68,9 @@ execute if entity @s[tag=!OS-listStoredLocations-start] run tag @s add OS-listSt
 
 # Adds to the forStoredLocation until it reaches either the amount of locations that are stored or Dynamic-15.
 
-execute if score @n[tag=OS-bob] OS-storedLocations >= @s OS-forStoredLocation if score @s OS-forStoredLocation <= @s OS-dynamic-15 store result storage onespin:scores forStoredLocation.ID int 1 run scoreboard players add @s OS-forStoredLocation 1
+execute if score @n[tag=OS-bob] OS-storedLocations >= @s OS-forStoredLocation if score @s OS-forStoredLocation <= @s OS-dynamic-10 store result storage onespin:scores forStoredLocation.ID int 1 run scoreboard players add @s OS-forStoredLocation 1
 
-execute if score @n[tag=OS-bob] OS-storedLocations >= @s OS-forStoredLocation if score @s OS-forStoredLocation <= @s OS-dynamic-15 run function onespin:print_stored_location with storage onespin:scores forStoredLocation
+execute if score @n[tag=OS-bob] OS-storedLocations >= @s OS-forStoredLocation if score @s OS-forStoredLocation <= @s OS-dynamic-10 run function onespin:print_stored_location with storage onespin:scores forStoredLocation
 
 
 
@@ -77,11 +79,11 @@ execute if score @n[tag=OS-bob] OS-storedLocations >= @s OS-forStoredLocation if
 
 execute if score @n[tag=OS-bob] OS-storedLocations <= @s OS-forStoredLocation run tag @s add OS-listStoredLocations-end
 
-execute if score @s OS-dynamic-15 <= @s OS-forStoredLocation run tag @s add OS-listStoredLocations-end
+execute if score @s OS-dynamic-10 <= @s OS-forStoredLocation run tag @s add OS-listStoredLocations-end
 
-execute if entity @s[tag=OS-listStoredLocations-end] run tellraw @s "-----------------------------------------------------"
+execute if entity @s[tag=OS-listStoredLocations-end] run tellraw @s {"text":"                                                                                ","color":"dark_gray","strikethrough":true}
 execute if entity @s[tag=OS-listStoredLocations-end] run scoreboard players reset @s warplist
 execute if entity @s[tag=OS-listStoredLocations-end] run scoreboard players set @s OS-forStoredLocation 0
-execute if entity @s[tag=OS-listStoredLocations-end] run scoreboard players set @s OS-dynamic-15 15
+execute if entity @s[tag=OS-listStoredLocations-end] run scoreboard players set @s OS-dynamic-15 10
 execute if entity @s[tag=OS-listStoredLocations-end] run tag @s remove OS-listStoredLocations-start
 execute if entity @s[tag=OS-listStoredLocations-end] run tag @s remove OS-listStoredLocations-end
