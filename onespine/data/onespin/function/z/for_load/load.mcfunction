@@ -37,7 +37,7 @@ gamerule mobGriefing true
 # %HIGH%
 gamerule mobExplosionDropDecay false
 
-gamerule minecartMaxSpeed 1000
+#gamerule minecartMaxSpeed 1000
 gamerule maxEntityCramming 24
 gamerule maxCommandForkCount 1000000
 gamerule logAdminCommands true

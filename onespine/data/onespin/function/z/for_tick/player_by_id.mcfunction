@@ -52,6 +52,12 @@ execute \
 
 
 execute as @s if score @s OS-rainbow = @s OS-rainbow run scoreboard players add @s OS-rainbow 1
+
+#$execute as @s if score @s OS-rainbow matches 1..5 run team modify OS-player-$(ID) suffix " is dead"
+#$execute as @s if score @s OS-rainbow matches 6..10 run team modify OS-player-$(ID) suffix " is alive"
+#$execute as @s if score @s OS-rainbow matches 1..5 run team modify OS-player-$(ID) color red
+#$execute as @s if score @s OS-rainbow matches 6..10 run team modify OS-player-$(ID) color green
+
 $execute as @s if score @s OS-rainbow matches 1..2 run team modify OS-player-$(ID) color yellow
 $execute as @s if score @s OS-rainbow matches 3..4 run team modify OS-player-$(ID) color red
 $execute as @s if score @s OS-rainbow matches 5..6 run team modify OS-player-$(ID) color blue

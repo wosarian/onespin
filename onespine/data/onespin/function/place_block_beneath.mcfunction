@@ -9,9 +9,9 @@ execute if entity @s[type=!player] run \
 
 # Tests if the executing player has the OS-creativeAllowed tag and returns the function if false.
 
-execute if entity @s[tag=!OS-creativeAllowed] run \ 
+execute if entity @s[gamemode=!creative,tag=!OS-creativeAllowed] run \ 
         tellraw @s [{"text":"Requires creative mode","color":"red"}]
-execute if entity @s[tag=!OS-creativeAllowed] run \ 
+execute if entity @s[gamemode=!creative,tag=!OS-creativeAllowed] run \ 
         return fail
 
 

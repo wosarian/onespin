@@ -73,12 +73,12 @@ scoreboard objectives add grenadier-playerXPLevels dummy
 scoreboard objectives modify grenadier-playerXPLevels displayname {"text": "Player XP Levels"}
 scoreboard objectives add grenadier-playerXPPoints dummy
 scoreboard objectives modify grenadier-playerXPPoints displayname {"text": "Player XP Points"}
-scoreboard objectives add grenadier-playerRespawnX dummy
-scoreboard objectives modify grenadier-playerRespawnX displayname {"text": "Player Respawn X Coordinate"}
-scoreboard objectives add grenadier-playerRespawnY dummy
-scoreboard objectives modify grenadier-playerRespawnY displayname {"text": "Player Respawn Y Coordinate"}
-scoreboard objectives add grenadier-playerRespawnZ dummy
-scoreboard objectives modify grenadier-playerRespawnZ displayname {"text": "Player Respawn Z Coordinate"}
+scoreboard objectives add grenadier-playerSpawnpointX dummy
+scoreboard objectives modify grenadier-playerSpawnpointX displayname {"text": "Player Spawnpoint X Coordinate"}
+scoreboard objectives add grenadier-playerSpawnpointY dummy
+scoreboard objectives modify grenadier-playerSpawnpointY displayname {"text": "Player Spawnpoint Y Coordinate"}
+scoreboard objectives add grenadier-playerSpawnpointZ dummy
+scoreboard objectives modify grenadier-playerSpawnpointZ displayname {"text": "Player Spawnpoint Z Coordinate"}
 
 
 # Playtime
