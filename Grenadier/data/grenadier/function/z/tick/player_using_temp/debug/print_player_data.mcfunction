@@ -1,5 +1,5 @@
 
-# Every Tick | Player | Debug | Print Player Data | Permission
+# Every Tick | Player Using Temp | Debug | Print Player Data | Permission
 
 execute \ 
     if entity @s[scores={grenadier-playerPermissionLevel=..3}] \ 
@@ -8,10 +8,12 @@ execute \
     if entity @s[scores={grenadier-playerPermissionLevel=..3}] \ 
         run return fail
 
-# Every Tick | Player | Debug | Print Player Data | Action
+# Every Tick | Player Using Temp | Debug | Print Player Data | Action
 
-tellraw @s ["----------------------------"]
+tellraw @s {"text":"                                                                                ","color":"dark_gray","strikethrough":true}
+tellraw @s {"text":"                         Debug - Player Data"}
+tellraw @s {"text":"                                                                                ","color":"dark_gray","strikethrough":true}
 $tellraw @s ["Coords: ",{storage:"grenadier:players",nbt:"player.$(ID).x"}," ",{storage:"grenadier:players",nbt:"player.$(ID).y"}," ",{storage:"grenadier:players",nbt:"player.$(ID).z"}]
 $tellraw @s ["Dimension: ",{storage:"grenadier:players",nbt:"player.$(ID).dimension"}]
 $tellraw @s ["Spawnpoint: ",{storage:"grenadier:players",nbt:"player.$(ID).spawnpoint"}]
-tellraw @s ["----------------------------"]
+tellraw @s {"text":"                                                                                ","color":"dark_gray","strikethrough":true}

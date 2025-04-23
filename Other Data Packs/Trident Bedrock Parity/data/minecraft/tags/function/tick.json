@@ -1,5 +1,6 @@
 {
+	"replace": false,
 	"values": [
-		"trident_bedrock_parity:z/for_tick"
+		"trident_bedrock_parity:z/tick"
 	]
 }

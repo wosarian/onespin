@@ -1,1 +1,0 @@
-execute as @e[type=drowned,tag=!drownedMainhandUpdated] run function trident_bedrock_parity:z/for_tick

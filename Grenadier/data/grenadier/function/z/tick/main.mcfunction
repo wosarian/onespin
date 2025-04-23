@@ -9,9 +9,10 @@ execute store result score #grenadier-main grenadier-loadedTNTs if entity @e[typ
 execute store result score #grenadier-main grenadier-loadedSquids if entity @e[type=squid]
 execute store result score #grenadier-main grenadier-onlinePlayers if entity @e[type=player]
 
-# Every Tick | Player
+# Every Tick | Player Using Temp
 
-execute as @a run function grenadier:z/for_every_tick/player
+execute as @a store result storage grenadier:temp temp.ID int 1 run scoreboard players get @s grenadier-playerID
+execute as @a run function #grenadier:runs_as_player_using_temp with storage grenadier:temp temp
 
 # Every Tick | Update Random Scores in #grenadier-main
 

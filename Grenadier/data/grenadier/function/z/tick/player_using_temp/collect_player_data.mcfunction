@@ -1,5 +1,5 @@
 
-# Every Tick | Player | Using Temp | Collect Player Data | Math
+# Every Tick | Player Using Temp | Collect Player Data | Math
 
 scoreboard players operation @s grenadier-playerDamage = @s grenadier-playerMaxHealth
 
@@ -40,12 +40,12 @@ execute \
     store result score @s grenadier-playTimeDays run \ 
         scoreboard players operation @s grenadier-playTimeDays /= #grenadier-main grenadier-const-24
 
-# Every Tick | Player | Using Temp | Collect Player Data | To Player Data Scores From Player Data
+# Every Tick | Player Using Temp | Collect Player Data | To Player Data Scores From Player Data
 
 execute store result score @s grenadier-playerXPPoints run xp query @s points
 execute store result score @s grenadier-playerXPLevels run xp query @s levels
 
-# Every Tick | Player | Using Temp | Collect Player Data | To grenadier:players From Player Data
+# Every Tick | Player Using Temp | Collect Player Data | To grenadier:players From Player Data
 
 $execute store result storage grenadier:players player.$(ID).x int 1 run data get entity @s Pos[0]
 $execute store result storage grenadier:players player.$(ID).y int 1 run data get entity @s Pos[1]
@@ -62,7 +62,7 @@ $data modify storage grenadier:players player.$(ID).spawnpoint.z set from entity
 $execute store result storage grenadier:players player.$(ID).max_health int 1 run attribute @s max_health base get 1
 $data modify storage grenadier:players player.$(ID).health set from entity @s Health
 
-# Every Tick | Player | Using Temp | Collect Player Data | To Player Data Scores From grenadier:players
+# Every Tick | Player Using Temp | Collect Player Data | To Player Data Scores From grenadier:players
 
 $execute store result score @s grenadier-playerX run data get storage grenadier:players player.$(ID).x 1
 $execute store result score @s grenadier-playerY run data get storage grenadier:players player.$(ID).y 1
@@ -76,6 +76,6 @@ $execute store result score @s grenadier-playerHealth run data get storage grena
 $execute store result score @s grenadier-playerHealth-100 run data get storage grenadier:players player.$(ID).health 100
 $execute store result score @s grenadier-playerMaxHealth run data get storage grenadier:players player.$(ID).max_health
 
-# Every Tick | Player | Using Temp | Collect Player Data | To grenadier:players From Player Data Scores
+# Every Tick | Player Using Temp | Collect Player Data | To grenadier:players From Player Data Scores
 
 $execute store result storage grenadier:players player.$(ID).health_percent int 1 run scoreboard players get @s grenadier-playerPercentHealth
