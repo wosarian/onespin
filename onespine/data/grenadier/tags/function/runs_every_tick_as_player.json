@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "onespin:z/for_tick/player_by_id",
+        "onespin:z/for_tick/player"
+    ]
+}

@@ -50,11 +50,6 @@ execute as @e[type=!#grenadier:non_living] \
 execute as @e[tag=OS-path] \ 
     run function onespin:z/path
 
-# Runs player function for every player.
-
-execute as @a \ 
-    run function onespin:z/for_tick/player
-
 # Runs onespin Defender Entity Module for every explosive entity.
 
 execute as @e[type=#grenadier:explosive] \ 

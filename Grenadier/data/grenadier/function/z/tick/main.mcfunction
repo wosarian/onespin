@@ -12,7 +12,7 @@ execute store result score #grenadier-main grenadier-onlinePlayers if entity @e[
 # Every Tick | Player Using Temp
 
 execute as @a store result storage grenadier:temp temp.ID int 1 run scoreboard players get @s grenadier-playerID
-execute as @a run function #grenadier:runs_as_player_using_temp with storage grenadier:temp temp
+execute as @a run function #grenadier:runs_every_tick_as_player with storage grenadier:temp temp
 
 # Every Tick | Update Random Scores in #grenadier-main
 
