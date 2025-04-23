@@ -1,5 +1,5 @@
 
-# Counters
+# Every Tick | Update Counter Scores in #grenadier-main
 
 execute store result score #grenadier-main grenadier-loadedMobs if entity @e[type=!#grenadier:non_living,type=!player]
 execute store result score #grenadier-main grenadier-loadedZombies if entity @e[type=zombie]
@@ -9,11 +9,11 @@ execute store result score #grenadier-main grenadier-loadedTNTs if entity @e[typ
 execute store result score #grenadier-main grenadier-loadedSquids if entity @e[type=squid]
 execute store result score #grenadier-main grenadier-onlinePlayers if entity @e[type=player]
 
-# Players
+# Every Tick | Player
 
 execute as @a run function grenadier:z/for_every_tick/player
 
-# Randoms
+# Every Tick | Update Random Scores in #grenadier-main
 
 execute store result score #grenadier-main grenadier-random-6 run random value 1..6
 execute store result score #grenadier-main grenadier-random-2 run random value 1..2

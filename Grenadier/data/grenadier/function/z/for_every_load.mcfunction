@@ -1,11 +1,13 @@
 
-# Main
+# Every Load | Add Main
 
 forceload add 0 0
 scoreboard objectives add grenadier-playerID dummy
 scoreboard objectives modify grenadier-playerID displayname {"text": "Player ID"}
+scoreboard objectives add grenadier-playerPermissionLevel dummy
+scoreboard objectives modify grenadier-playerPermissionLevel displayname {"text": "Player Permission Level"}
 
-# Constants
+# Every Load | Add Constant Scores in #grenadier-main
 
 scoreboard objectives add grenadier-const-20 dummy
 scoreboard objectives modify grenadier-const-20 displayname {"text": "Constant 20"}
@@ -35,7 +37,7 @@ scoreboard objectives add grenadier-const-5 dummy
 scoreboard objectives modify grenadier-const-5 displayname {"text": "Constant 5"}
 scoreboard players set #grenadier-main grenadier-const-5 5
 
-# Counters
+# Every Load | Add Counter Scores in #grenadier-main
 
 scoreboard objectives add grenadier-loadedMobs dummy
 scoreboard objectives modify grenadier-loadedMobs displayname {"text": "Amount of Loaded Mobs"}
@@ -52,7 +54,7 @@ scoreboard objectives modify grenadier-loadedSquids displayname {"text": "Amount
 scoreboard objectives add grenadier-onlinePlayers dummy
 scoreboard objectives modify grenadier-onlinePlayers displayname {"text": "Amount of Online Players"}
 
-# Players
+# Every Load | Add Player Data Scores
 
 scoreboard objectives add grenadier-playerPercentHealth dummy
 scoreboard objectives modify grenadier-playerPercentHealth displayname {"text": "Player Health Percent"}
@@ -86,10 +88,6 @@ scoreboard objectives add grenadier-playerSpawnpointY dummy
 scoreboard objectives modify grenadier-playerSpawnpointY displayname {"text": "Player Spawnpoint Y Coordinate"}
 scoreboard objectives add grenadier-playerSpawnpointZ dummy
 scoreboard objectives modify grenadier-playerSpawnpointZ displayname {"text": "Player Spawnpoint Z Coordinate"}
-
-
-# Playtime
-
 scoreboard objectives add grenadier-playTime minecraft.custom:minecraft.play_time
 scoreboard objectives modify grenadier-playTime displayname {"text": "Total Playtime (In Ticks)"}
 scoreboard objectives add grenadier-playTimeSeconds dummy
@@ -101,7 +99,12 @@ scoreboard objectives modify grenadier-playTimeHours displayname {"text": "Total
 scoreboard objectives add grenadier-playTimeDays dummy
 scoreboard objectives modify grenadier-playTimeDays displayname {"text": "Total Playtime (In Days)"}
 
-# Randoms
+# Every Load | Add Debug Scores
+
+scoreboard objectives add grenadier-printPlayerData trigger
+scoreboard objectives modify grenadier-printPlayerData displayname {"text": "Debug - Print Player Data"}
+
+# Every Load | Add Random Scores
 
 scoreboard objectives add grenadier-random-6 dummy
 scoreboard objectives modify grenadier-random-6 displayname {"text": "Random Number From 6"}
