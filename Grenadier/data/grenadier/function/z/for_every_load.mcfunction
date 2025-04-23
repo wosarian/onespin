@@ -13,6 +13,9 @@ scoreboard players set #grenadier-main grenadier-const-20 20
 scoreboard objectives add grenadier-const-24 dummy
 scoreboard objectives modify grenadier-const-24 displayname {"text": "Constant 24"}
 scoreboard players set #grenadier-main grenadier-const-24 24
+scoreboard objectives add grenadier-const-100 dummy
+scoreboard objectives modify grenadier-const-100 displayname {"text": "Constant 100"}
+scoreboard players set #grenadier-main grenadier-const-100 100
 scoreboard objectives add grenadier-const-60 dummy
 scoreboard objectives modify grenadier-const-60 displayname {"text": "Constant 60"}
 scoreboard players set #grenadier-main grenadier-const-60 60
@@ -51,14 +54,18 @@ scoreboard objectives modify grenadier-onlinePlayers displayname {"text": "Amoun
 
 # Players
 
+scoreboard objectives add grenadier-playerPercentHealth dummy
+scoreboard objectives modify grenadier-playerPercentHealth displayname {"text": "Player Health Percent"}
 scoreboard objectives add grenadier-playerDamage dummy
 scoreboard objectives modify grenadier-playerDamage displayname {"text": "Player Damage"}
 scoreboard objectives add grenadier-playerPitch dummy
 scoreboard objectives modify grenadier-playerPitch displayname {"text": "Player X Rotation"}
 scoreboard objectives add grenadier-playerYaw dummy
 scoreboard objectives modify grenadier-playerYaw displayname {"text": "Player Y Rotation"}
-scoreboard objectives add grenadier-playerHealth health
-scoreboard objectives modify grenadier-playerHealth displayname {"text": "HP","color":"red"}
+scoreboard objectives add grenadier-playerHealth dummy
+scoreboard objectives modify grenadier-playerHealth displayname {"text": "Player Health","color":"red"}
+scoreboard objectives add grenadier-playerHealth-100 dummy
+scoreboard objectives modify grenadier-playerHealth-100 displayname {"text": "Player Health 100","color":"red"}
 scoreboard objectives add grenadier-playerMaxHealth dummy
 scoreboard objectives modify grenadier-playerMaxHealth displayname {"text": "Player Maximum Health"}
 scoreboard objectives add grenadier-playerHunger food

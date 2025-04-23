@@ -12,6 +12,7 @@ execute store result score @s grenadier-playerDamage \
     run scoreboard players operation @s grenadier-playerDamage -= @s grenadier-playerHealth
 execute store result score @s grenadier-playerXPPoints run xp query @s points
 execute store result score @s grenadier-playerXPLevels run xp query @s levels
+execute store result score @s grenadier-playerPercentHealth run scoreboard players operation @s grenadier-playerHealth-100 /= @s grenadier-playerMaxHealth
 
 # Playtime
 

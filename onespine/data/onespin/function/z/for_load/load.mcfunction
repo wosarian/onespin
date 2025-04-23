@@ -134,6 +134,12 @@ scoreboard objectives modify OS-forStoredLocation displayname {"text": "For Ever
 
 scoreboard objectives add OS-sidebarLine dummy
 
+# Below name
+
+scoreboard objectives add OS-playerBelowName dummy
+scoreboard objectives modify OS-playerBelowName displayname ""
+scoreboard objectives setdisplay below_name OS-playerBelowName
+
 # Remove
 
 scoreboard objectives remove OS-storeLocation

@@ -11,7 +11,7 @@ execute store result score #grenadier-main grenadier-onlinePlayers if entity @e[
 
 # Players
 
-execute as @a run function grenadier:z/for_tick/player
+execute as @a run function grenadier:z/for_every_tick/player
 
 # Randoms
 

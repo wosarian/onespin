@@ -1,5 +1,5 @@
 {
     "values": [
-        "grenadier:z/for_tick/player_by_id"
+        "grenadier:z/for_every_tick/player_by_id"
     ]
 }

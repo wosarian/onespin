@@ -29,6 +29,10 @@ execute \
     as @s[scores={panel=1}] run \ 
         function onespin:z/print_control_panel with storage grenadier:temp temp
 
+# Below name
+
+$scoreboard players display numberformat @s OS-playerBelowName fixed [{color:"red",storage:"grenadier:players",nbt:"player.$(ID).health_percent"},{text:"%",color:red}]
+
 
 # # Branches.
 
