@@ -227,3 +227,52 @@ execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverte
 # Branches.
 
 function onespin:z/defender_player
+
+
+# AAAAAAAAAAAAAA
+$team add OS-player-$(ID)
+
+
+$team join OS-player-$(ID) @s[team=!OS-1-team]
+
+
+
+
+$execute \ 
+    as @s[tag=OS-4-locked] \ 
+        at @s \ 
+            unless predicate grenadier:location/in_dimension/any_minecraft run \ 
+                function onespin:z/teleport with storage onespin:minigame_4 player.$(ID)
+
+
+execute \ 
+    as @s[x=-14999992,y=-66,z=-14999992,dx=29999984,dy=-29999933,dz=29999984] run \ 
+        effect give @s regeneration 4 255 true
+execute \ 
+    as @s[x=-14999992,y=-66,z=-14999992,dx=29999984,dy=-29999933,dz=29999984] run \ 
+        effect give @s resistance 4 255 true
+$execute \ 
+    as @s[x=-14999992,y=-66,z=-14999992,dx=29999984,dy=-29999933,dz=29999984] run \ 
+        function onespin:z/teleport with storage grenadier:players player.$(ID).spawnpoint
+
+execute \ 
+    as @s[scores={panel=1}] run \ 
+        function onespin:z/print_control_panel with storage grenadier:temp temp
+
+# Below name
+
+$scoreboard players display numberformat @s OS-playerBelowName fixed [{color:"red",storage:"grenadier:players",nbt:"player.$(ID).health_percent"},{text:"%",color:red}]
+
+execute as @s if score @s OS-rainbow = @s OS-rainbow run scoreboard players add @s OS-rainbow 1
+
+#$execute as @s if score @s OS-rainbow matches 1..5 run team modify OS-player-$(ID) suffix " is dead"
+#$execute as @s if score @s OS-rainbow matches 6..10 run team modify OS-player-$(ID) suffix " is alive"
+#$execute as @s if score @s OS-rainbow matches 1..5 run team modify OS-player-$(ID) color red
+#$execute as @s if score @s OS-rainbow matches 6..10 run team modify OS-player-$(ID) color green
+
+$execute as @s if score @s OS-rainbow matches 1..2 run team modify OS-player-$(ID) color yellow
+$execute as @s if score @s OS-rainbow matches 3..4 run team modify OS-player-$(ID) color red
+$execute as @s if score @s OS-rainbow matches 5..6 run team modify OS-player-$(ID) color blue
+$execute as @s if score @s OS-rainbow matches 7..8 run team modify OS-player-$(ID) color green
+$execute as @s if score @s OS-rainbow matches 9..10 run team modify OS-player-$(ID) color light_purple
+execute as @s if score @s OS-rainbow matches 11.. run scoreboard players set @s OS-rainbow 0
