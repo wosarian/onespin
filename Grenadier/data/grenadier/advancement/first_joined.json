@@ -5,6 +5,6 @@
         }
     },
     "rewards": {
-        "function": "grenadier:z/player_first_join"
+        "function": "grenadier:z/player_first_join/redirect"
     }
 }

@@ -1,7 +1,8 @@
 {
     "replace": false,
     "values": [
-        "onespin:z/for_tick/player",
+        "onespin:z/tick/player",
+        "onespin:z/tick/player/set_operator_permission_levels",
         "onespin:z/minigames/minigame_4/joining",
         "onespin:z/minigames/minigame_4/autosave",
         "onespin:z/minigames/minigame_4/leaving",

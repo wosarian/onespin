@@ -1,33 +1,4 @@
 
-# # # Initial
-
-# # Happens when the player joins the world first time.
-
-# Sets their spawnpoint to lobby.
-
-execute \ 
-    if entity @s[tag=!OS-firstJoined] \ 
-        in onespin:dimension_0 run \ 
-            spawnpoint @s 0 50 0
-
-# Teleports them to lobby.
-
-execute \ 
-    if entity @s[tag=!OS-firstJoined] \ 
-        in onespin:dimension_0 run \ 
-            tp @s 0 50 0
-
-# Adds a tag that breaks the loop.
-
-execute \ 
-    if entity @s[tag=!OS-firstJoined] run \ 
-        tag @s add OS-4-lockedOut
-execute \ 
-    if entity @s[tag=!OS-firstJoined] run \ 
-        scoreboard players set @s OS-dynamic-10 10
-execute \ 
-    if entity @s[tag=!OS-firstJoined] run \ 
-        tag @s add OS-firstJoined
 
 # # # Permissions
 
@@ -41,60 +12,14 @@ execute \
 
 execute \ 
     if entity @s[tag=OS-member] \ 
-        unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
-            run scoreboard players set @s OS-permissionLevel 0
-
-
-
-# # # Operators
-
-# # Permission Levels
-
-# Sets a permission level to wosarian.
-
-execute \ 
-    unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
-        if score @s grenadier-playerID matches 1 \ 
-            run scoreboard players set @s OS-permissionLevel 4
-
-# Sets a permission level to spoockybro.
-
-execute \ 
-    unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
-        if score @s grenadier-playerID matches 2 \ 
-            run scoreboard players set @s OS-permissionLevel 3
-
-# Sets a permission level to teratoph.
-
-execute \ 
-    unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
-        if score @s grenadier-playerID matches 3 \ 
-            run scoreboard players set @s OS-permissionLevel 3
-
-# Sets a permission level to _Dere_.
-
-execute \ 
-    unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
-        if score @s grenadier-playerID matches 4 \ 
-            run scoreboard players set @s OS-permissionLevel 3
-
-# Sets a permission level to _Shouly.
-
-execute unless score @s OS-permissionLevel = @s OS-permissionLevel if score @s grenadier-playerID matches 5 run scoreboard players set @s OS-permissionLevel 3
-
-
-# Sets a permission level to spoockybro (Bedrock).
-
-execute \ 
-    unless score @s OS-permissionLevel = @s OS-permissionLevel \ 
-        if score @s grenadier-playerID matches 6 \ 
-            run scoreboard players set @s OS-permissionLevel 3
+        unless score @s grenadier-playerPermissionLevel = @s grenadier-playerPermissionLevel \ 
+            run scoreboard players set @s grenadier-playerPermissionLevel 0
 
 
 
 # Constantly tries to add OS-creativeAllowed tag to operators.
 
-# execute if score @s[tag=!OS-creativeAllowed] OS-permissionLevel matches 2.. run tag @s add OS-creativeAllowed
+# execute if score @s[tag=!OS-creativeAllowed] grenadier-playerPermissionLevel matches 2.. run tag @s add OS-creativeAllowed
 
 
 
@@ -102,6 +27,7 @@ execute \
 tag @s remove OS-operator
 tag @s remove OS-isOperator
 tag @s remove OS-firstJoin
+tag @s remove OS-firstJoined
 tag @s remove OS-allowCreative
 tag @s remove OS-allowTeleportLocation
 tag @s remove OS-resetScoresFunction
@@ -112,6 +38,10 @@ clear @s[scores={grenadier-playerID=3..}] *[custom_data={"OS-skeletonKey":true}]
 tag @s[advancements={onespin:use_tagged_item=true}] add OS-taggedItemUsing
 tag @s[advancements={onespin:use_tagged_item=false}] remove OS-taggedItemUsing
 advancement revoke @s[tag=OS-taggedItemUsing] only onespin:use_tagged_item
+
+tag @s[advancements={onespin:use_tagged_item=true}] add grenadier-taggedItemUsing
+tag @s[advancements={onespin:use_tagged_item=false}] remove grenadier-taggedItemUsing
+advancement revoke @s[tag=grenadier-taggedItemUsing] only onespin:use_tagged_item
 
 
 
@@ -218,11 +148,11 @@ execute at @s if predicate grenadier:location/in_dimension/any_minecraft if scor
 execute at @s if predicate grenadier:location/in_dimension/any_minecraft if score @s grenadier-playerPitch matches -136..-45 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"+X ➡ E",color:red}]
 execute at @s if predicate grenadier:location/in_dimension/any_minecraft if score @s grenadier-playerPitch matches 46..135 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-X ⬅ W",color:yellow}]
 
-execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s OS-permissionLevel matches 1.. if score @s grenadier-playerPitch matches -179..-135 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-Z ⬆ N",color:gold}]
-execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s OS-permissionLevel matches 1.. if score @s grenadier-playerPitch matches 135..179 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-Z ⬆ N",color:gold}]
-execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s OS-permissionLevel matches 1.. if score @s grenadier-playerPitch matches -46..45 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"+Z ⬇ S",color:"aqua"}]
-execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s OS-permissionLevel matches 1.. if score @s grenadier-playerPitch matches -136..-45 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"+X ➡ E",color:red}]
-execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s OS-permissionLevel matches 1.. if score @s grenadier-playerPitch matches 46..135 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-X ⬅ W",color:yellow}]
+execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches -179..-135 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-Z ⬆ N",color:gold}]
+execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches 135..179 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-Z ⬆ N",color:gold}]
+execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches -46..45 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"+Z ⬇ S",color:"aqua"}]
+execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches -136..-45 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"+X ➡ E",color:red}]
+execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches 46..135 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-X ⬅ W",color:yellow}]
 
 # Branches.
 

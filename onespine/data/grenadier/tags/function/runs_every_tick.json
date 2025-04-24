@@ -1,6 +1,6 @@
 {
     "replace": false,
     "values": [
-        "onespin:z/for_tick/tick"
+        "onespin:z/tick/main"
     ]
 }

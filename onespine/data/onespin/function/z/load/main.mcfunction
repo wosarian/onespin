@@ -67,8 +67,8 @@ gamerule allowFireTicksAwayFromPlayer false
 
 # Main
 
-scoreboard objectives add OS-permissionLevel dummy
-scoreboard objectives modify OS-permissionLevel displayname {"text": "Permission Level"}
+scoreboard objectives add grenadier-playerPermissionLevel dummy
+scoreboard objectives modify grenadier-playerPermissionLevel displayname {"text": "Permission Level"}
 
 # Other
 
@@ -165,4 +165,4 @@ scoreboard objectives add OS-4-drownedMainhandRandom dummy
 
 # This schedules a load function for detecting entities after they've loaded.
 
-schedule function onespin:z/for_load/load_delayed 10s
+schedule function onespin:z/load/load_delayed 10s

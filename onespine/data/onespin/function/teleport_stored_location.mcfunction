@@ -10,8 +10,12 @@ execute if entity @s[type=!player] run return fail
 
 # Tests if the executing player has the required minimum permission level and returns the function if false.
 
-execute if entity @s[scores={OS-permissionLevel=..1}] run tellraw @s [{"text":"Requires minimum permission level to be 2 or more","color":"red"}]
-execute if entity @s[scores={OS-permissionLevel=..1}] run return fail
+execute \ 
+    if entity @s[scores={grenadier-playerPermissionLevel=..1}] \ 
+        run tellraw @s [{"text":"Requires minimum permission level to be 2 or more","color":"red"}]
+execute \ 
+    if entity @s[scores={grenadier-playerPermissionLevel=..1}] \ 
+        run return fail
 
 
 
@@ -20,8 +24,8 @@ $execute unless data storage onespin:locations stored_location.$(ID) run tellraw
 $execute unless data storage onespin:locations stored_location.$(ID) run return fail
 #
 #
-$execute if entity @s[scores={OS-permissionLevel=..1}] if score #OS-bob OS-storedLocation-$(ID)-operator matches 1 run tellraw @s ["",{"text":"Specified location requires minimum permission level of 2 or more","color":"red"}]
-$execute if entity @s[scores={OS-permissionLevel=..1}] if score #OS-bob OS-storedLocation-$(ID)-operator matches 1 run return fail
+$execute if entity @s[scores={grenadier-playerPermissionLevel=..1}] if score #OS-bob OS-storedLocation-$(ID)-operator matches 1 run tellraw @s ["",{"text":"Specified location requires minimum permission level of 2 or more","color":"red"}]
+$execute if entity @s[scores={grenadier-playerPermissionLevel=..1}] if score #OS-bob OS-storedLocation-$(ID)-operator matches 1 run return fail
 
 # Run teleport function with specified stored location data.
 $function onespin:z/teleport with storage onespin:locations stored_location.$(ID)

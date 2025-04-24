@@ -1,6 +1,6 @@
 {
     "replace": false,
     "values": [
-        "onespin:z/load/main"
+        "onespin:z/player_first_join/main"
     ]
 }

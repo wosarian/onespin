@@ -9,10 +9,12 @@ execute if entity @s[type=!player] run \
 
 # Tests if the executing player has the required minimum permission level and returns the function if false.
 
-execute if entity @s[scores={OS-permissionLevel=..1}] run \ 
-        tellraw @s [{"text":"Requires minimum permission level to be 2 or more","color":"red"}]
-execute if entity @s[scores={OS-permissionLevel=..1}] run \ 
-        return fail
+execute \ 
+    if entity @s[scores={grenadier-playerPermissionLevel=..1}] \ 
+        run tellraw @s [{"text":"Requires minimum permission level to be 2 or more","color":"red"}]
+execute \ 
+    if entity @s[scores={grenadier-playerPermissionLevel=..1}] \ 
+        run return fail
 
 
 # Give the executor OS Spectator Tool.
