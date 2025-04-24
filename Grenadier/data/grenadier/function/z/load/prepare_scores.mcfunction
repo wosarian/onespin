@@ -1,13 +1,12 @@
 
-# Every Load | Add Main
+# Main
 
-forceload add 0 0
 scoreboard objectives add grenadier-playerID dummy
 scoreboard objectives modify grenadier-playerID displayname {"text": "Player ID"}
 scoreboard objectives add grenadier-playerPermissionLevel dummy
 scoreboard objectives modify grenadier-playerPermissionLevel displayname {"text": "Player Permission Level"}
 
-# Every Load | Add Constant Scores in #grenadier-main
+# Constant Scores in #grenadier-main
 
 scoreboard objectives add grenadier-const-20 dummy
 scoreboard objectives modify grenadier-const-20 displayname {"text": "Constant 20"}
@@ -37,7 +36,7 @@ scoreboard objectives add grenadier-const-5 dummy
 scoreboard objectives modify grenadier-const-5 displayname {"text": "Constant 5"}
 scoreboard players set #grenadier-main grenadier-const-5 5
 
-# Every Load | Add Counter Scores in #grenadier-main
+# Counter Scores in #grenadier-main
 
 scoreboard objectives add grenadier-loadedMobs dummy
 scoreboard objectives modify grenadier-loadedMobs displayname {"text": "Amount of Loaded Mobs"}
@@ -54,7 +53,7 @@ scoreboard objectives modify grenadier-loadedSquids displayname {"text": "Amount
 scoreboard objectives add grenadier-onlinePlayers dummy
 scoreboard objectives modify grenadier-onlinePlayers displayname {"text": "Amount of Online Players"}
 
-# Every Load | Add Player Data Scores
+# Player Data Scores
 
 scoreboard objectives add grenadier-playerPercentHealth dummy
 scoreboard objectives modify grenadier-playerPercentHealth displayname {"text": "Player Health Percent"}
@@ -99,12 +98,12 @@ scoreboard objectives modify grenadier-playTimeHours displayname {"text": "Total
 scoreboard objectives add grenadier-playTimeDays dummy
 scoreboard objectives modify grenadier-playTimeDays displayname {"text": "Total Playtime (In Days)"}
 
-# Every Load | Add Debug Scores
+# Debug Scores
 
 scoreboard objectives add grenadier-printPlayerData trigger
 scoreboard objectives modify grenadier-printPlayerData displayname {"text": "Debug - Print Player Data"}
 
-# Every Load | Add Random Scores
+# Random Scores
 
 scoreboard objectives add grenadier-random-6 dummy
 scoreboard objectives modify grenadier-random-6 displayname {"text": "Random Number From 6"}

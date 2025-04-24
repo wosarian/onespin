@@ -1,5 +1,7 @@
 {
     "values": [
-        "grenadier:z/tick/main"
+        "grenadier:z/tick/redirect_as_player",
+        "grenadier:z/tick/update_counter_scores",
+        "grenadier:z/tick/update_random_scores"
     ]
 }

@@ -8,15 +8,6 @@ execute \
     if entity @s[tag=!OS-member] \ 
         run tag @s add OS-member
 
-# Sets permission level of every player to 0 in the beginning.
-
-execute \ 
-    if entity @s[tag=OS-member] \ 
-        unless score @s grenadier-playerPermissionLevel = @s grenadier-playerPermissionLevel \ 
-            run scoreboard players set @s grenadier-playerPermissionLevel 0
-
-
-
 # Constantly tries to add OS-creativeAllowed tag to operators.
 
 # execute if score @s[tag=!OS-creativeAllowed] grenadier-playerPermissionLevel matches 2.. run tag @s add OS-creativeAllowed
