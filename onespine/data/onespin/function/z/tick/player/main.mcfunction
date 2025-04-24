@@ -103,10 +103,6 @@ recipe give @s[tag=OS-4-defaultRecipesAllowed] *
 
 #execute as @s[tag=OS-4-lockedOut] at @s if predicate grenadier:location/in_dimension/any_minecraft in onespin:dimension_2 run tp @s -271 57 29
 
-
-execute at @s unless predicate onespin:location/dimension/minigame_5 run tag @s remove OS-5-inGame
-execute at @s if predicate onespin:location/dimension/minigame_5 run tag @s add OS-5-inGame
-
 effect give @s[tag=OS-5-inGame] saturation 2 255 true
 
 #207 63 2
@@ -126,13 +122,13 @@ execute if entity @s[tag=OS-inLibrary] run effect give @s night_vision infinite 
 
 
 # You are the chosen one
+
 execute as @s[x=-145,y=-59,z=75.9,dx=1,dy=1,dz=0,scores={grenadier-playerID=1}] at @s in onespin:dimension_1 run tp @s ~ ~ 77
 execute as @s[x=-145,y=-59,z=76.1,dx=1,dy=1,dz=0,scores={grenadier-playerID=1}] at @s in onespin:dimension_1 run tp @s ~ ~ 75
 
 
 # kirby power
 
-title @s times 0 1 0
 execute at @s if predicate grenadier:location/in_dimension/any_minecraft if score @s grenadier-playerPitch matches -179..-135 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-Z ⬆ N",color:gold}]
 execute at @s if predicate grenadier:location/in_dimension/any_minecraft if score @s grenadier-playerPitch matches 135..179 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-Z ⬆ N",color:gold}]
 execute at @s if predicate grenadier:location/in_dimension/any_minecraft if score @s grenadier-playerPitch matches -46..45 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"+Z ⬇ S",color:"aqua"}]
@@ -186,14 +182,14 @@ $scoreboard players display numberformat @s OS-playerBelowName fixed [{color:"re
 
 execute as @s if score @s OS-rainbow = @s OS-rainbow run scoreboard players add @s OS-rainbow 1
 
-#$execute as @s if score @s OS-rainbow matches 1..5 run team modify OS-player-$(ID) suffix " is dead"
-#$execute as @s if score @s OS-rainbow matches 6..10 run team modify OS-player-$(ID) suffix " is alive"
-#$execute as @s if score @s OS-rainbow matches 1..5 run team modify OS-player-$(ID) color red
-#$execute as @s if score @s OS-rainbow matches 6..10 run team modify OS-player-$(ID) color green
+$execute as @s if score @s OS-rainbow matches 1..5 run team modify OS-player-$(ID) suffix " is dead"
+$execute as @s if score @s OS-rainbow matches 6..10 run team modify OS-player-$(ID) suffix " is alive"
+$execute as @s if score @s OS-rainbow matches 1..5 run team modify OS-player-$(ID) color red
+$execute as @s if score @s OS-rainbow matches 6..10 run team modify OS-player-$(ID) color green
 
-$execute as @s if score @s OS-rainbow matches 1..2 run team modify OS-player-$(ID) color yellow
-$execute as @s if score @s OS-rainbow matches 3..4 run team modify OS-player-$(ID) color red
-$execute as @s if score @s OS-rainbow matches 5..6 run team modify OS-player-$(ID) color blue
-$execute as @s if score @s OS-rainbow matches 7..8 run team modify OS-player-$(ID) color green
-$execute as @s if score @s OS-rainbow matches 9..10 run team modify OS-player-$(ID) color light_purple
+# $execute as @s if score @s OS-rainbow matches 1..2 run team modify OS-player-$(ID) color yellow
+# $execute as @s if score @s OS-rainbow matches 3..4 run team modify OS-player-$(ID) color red
+# $execute as @s if score @s OS-rainbow matches 5..6 run team modify OS-player-$(ID) color blue
+# $execute as @s if score @s OS-rainbow matches 7..8 run team modify OS-player-$(ID) color green
+# $execute as @s if score @s OS-rainbow matches 9..10 run team modify OS-player-$(ID) color light_purple
 execute as @s if score @s OS-rainbow matches 11.. run scoreboard players set @s OS-rainbow 0

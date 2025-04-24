@@ -6,6 +6,7 @@
         "onespin:z/minigames/minigame_4/joining",
         "onespin:z/minigames/minigame_4/autosave",
         "onespin:z/minigames/minigame_4/leaving",
-        "onespin:z/minigames/minigame_5/save_location"
+        "onespin:z/minigames/minigame_5/save_location",
+        "onespin:z/minigames/minigame_5/give_in_game_tag"
     ]
 }

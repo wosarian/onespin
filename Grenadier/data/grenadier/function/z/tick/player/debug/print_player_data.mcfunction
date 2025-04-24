@@ -1,5 +1,5 @@
 
-# Every Tick | Player Using Temp | Debug | Print Player Data | Permission
+# Tests if the executing player has the required minimum permission level and returns the function if false.
 
 execute \ 
     if entity @s[scores={grenadier-playerPermissionLevel=..3}] \ 
@@ -8,7 +8,7 @@ execute \
     if entity @s[scores={grenadier-playerPermissionLevel=..3}] \ 
         run return fail
 
-# Every Tick | Player Using Temp | Debug | Print Player Data | Action
+# Action
 
 tellraw @s {"text":"                                                                                ","color":"dark_gray","strikethrough":true}
 tellraw @s {"text":"                         Debug - Player Data"}
