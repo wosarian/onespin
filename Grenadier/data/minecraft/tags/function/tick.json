@@ -1,6 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"grenadier:z/tick/redirect"
+		"grenadier:z/tick_redirect"
 	]
 }

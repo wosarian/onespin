@@ -1,6 +1,6 @@
 {
     "values": [
-        "grenadier:z/player_first_join/give_player_id",
-        "grenadier:z/player_first_join/set_player_permission_level"
+        "grenadier:z/give_player_id",
+        "grenadier:z/set_player_permission_level"
     ]
 }

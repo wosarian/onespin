@@ -1,6 +1,6 @@
 {
     "values": [
-        "grenadier:z/tick/player/collect_player_data",
-        "grenadier:z/tick/player/debug/trigger_print_player_data"
+        "grenadier:z/collect_player_data",
+        "grenadier:z/debug/trigger_print_player_data"
     ]
 }

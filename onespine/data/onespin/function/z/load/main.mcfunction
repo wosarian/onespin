@@ -104,8 +104,6 @@ scoreboard objectives add OS-3-health dummy
 
 scoreboard objectives add leaveSurvival trigger
 scoreboard objectives modify leaveSurvival displayname {"text": "Leave Minigame: Survival"}
-scoreboard objectives add skygamesSave trigger
-scoreboard objectives modify skygamesSave displayname {"text": "Minigame: SkyGames - Save"}
 scoreboard objectives add warplist trigger
 scoreboard objectives modify warplist displayname {"text": "Print All Stored Locations"}
 scoreboard objectives add warp trigger

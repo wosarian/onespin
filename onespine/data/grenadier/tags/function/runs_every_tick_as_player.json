@@ -7,6 +7,9 @@
         "onespin:z/minigames/minigame_4/autosave",
         "onespin:z/minigames/minigame_4/leaving",
         "onespin:z/minigames/minigame_5/save_location",
-        "onespin:z/minigames/minigame_5/give_in_game_tag"
+        "onespin:z/minigames/minigame_5/remove_tag_outside_game",
+        "onespin:z/minigames/minigame_5/teleport_to_save",
+        "onespin:z/minigames/minigame_5/remove_save_in_void",
+        "onespin:z/minigames/minigame_5/remove_save_on_death"
     ]
 }
