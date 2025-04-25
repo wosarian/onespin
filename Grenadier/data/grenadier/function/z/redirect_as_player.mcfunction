@@ -1,2 +1,2 @@
 
-execute as @a run function grenadier:z/tag_redirect_using_temp
+execute as @a run function grenadier:z/redirect_using_temp
