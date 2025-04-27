@@ -1,0 +1,29 @@
+{
+  "pack": {
+    "description": [
+      {
+        "text": "Armor Stand Hands",
+        "color": "aqua",
+        "italic": false,
+        "bold": true
+      },
+      {
+        "text": "\nEnables hands for armor stands on placement",
+        "color": "dark_aqua",
+        "italic": false,
+        "bold": false
+      },
+      {
+        "text": "\nby wosarian",
+        "color": "dark_gray",
+        "italic": false,
+        "bold": false
+      }
+    ],
+    "pack_format": 71,
+    "supported_formats": [
+      55,
+      71
+    ]
+  }
+}

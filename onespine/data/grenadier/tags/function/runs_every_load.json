@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "onespin:z/load/main",
+        "onespin:z/minigames/minigame_5/prepare_scores"
+    ]
+}

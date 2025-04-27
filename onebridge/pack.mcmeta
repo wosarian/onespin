@@ -1,0 +1,37 @@
+{
+  "pack": {
+    "description": [
+      {
+        "text": "onebridge",
+        "color": "aqua",
+        "italic": false,
+        "bold": true
+      },
+      {
+        "text": "\nAdds compatibility between everything else and onespin server",
+        "color": "dark_aqua",
+        "italic": false,
+        "bold": false
+      },
+      {
+        "text": "\nby wosarian",
+        "color": "dark_gray",
+        "italic": false,
+        "bold": false
+      }
+    ],
+    "pack_format": 71,
+    "supported_formats": [
+      55,
+      71
+    ]
+  },
+  "filter": {
+    "block": [
+      {
+				"namespace": "vanillatweaks",
+				"path": "advancement/.*"
+			}
+    ]
+  }
+}

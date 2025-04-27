@@ -1,0 +1,6 @@
+{
+    "replace": false,
+    "values": [
+        "onebridge:z/player_first_join/set_durability_ping_to_subtitle"
+    ]
+}

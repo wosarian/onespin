@@ -1,0 +1,29 @@
+{
+  "pack": {
+    "description": [
+      {
+        "text": "Trident Bedrock Parity",
+        "color": "aqua",
+        "italic": false,
+        "bold": true
+      },
+      {
+        "text": "\nChanges trident behavior to match Bedrock Edition",
+        "color": "dark_aqua",
+        "italic": false,
+        "bold": false
+      },
+      {
+        "text": "\nby wosarian",
+        "color": "dark_gray",
+        "italic": false,
+        "bold": false
+      }
+    ],
+    "pack_format": 71,
+    "supported_formats": [
+      55,
+      71
+    ]
+  }
+}

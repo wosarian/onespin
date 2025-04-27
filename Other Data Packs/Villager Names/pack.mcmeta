@@ -1,0 +1,29 @@
+{
+  "pack": {
+    "description": [
+      {
+        "text": "Villager Names",
+        "color": "aqua",
+        "italic": false,
+        "bold": true
+      },
+      {
+        "text": "\nGives random names to villagers on spawn",
+        "color": "dark_aqua",
+        "italic": false,
+        "bold": false
+      },
+      {
+        "text": "\nby wosarian",
+        "color": "dark_gray",
+        "italic": false,
+        "bold": false
+      }
+    ],
+    "pack_format": 71,
+    "supported_formats": [
+      55,
+      71
+    ]
+  }
+}

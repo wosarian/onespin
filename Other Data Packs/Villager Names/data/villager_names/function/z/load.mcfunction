@@ -1,0 +1,2 @@
+
+scoreboard objectives add villagerNameRandom dummy

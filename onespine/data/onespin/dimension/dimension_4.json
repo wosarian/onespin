@@ -1,0 +1,27 @@
+{
+	"type": "onespin:dimension_4_type",
+    "generator": {
+        "settings": {
+            "biome": "onespin:dimension_4_biome",
+            "features": false,
+            "lakes": false,
+            "layers": [
+                {
+                    "block": "minecraft:air",
+                    "height": 62
+                },
+                {
+                    "block": "minecraft:bedrock",
+                    "height": 1
+                },
+                {
+                    "block": "minecraft:white_concrete",
+                    "height": 1
+                }
+            ],
+            "structure_overrides": [
+            ]
+        },
+        "type": "minecraft:flat"
+    }
+}

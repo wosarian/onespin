@@ -1,0 +1,1 @@
+scoreboard players set @s[scores={OS-playerDead=1..}] OS-playerDead 0
