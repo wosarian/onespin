@@ -1,1 +1,0 @@
-execute as @e[type=armor_stand,tag=!armorStandUpdated] at @s if predicate grenadier:location/in_dimension/any_minecraft run function armor_stand_hands:z/update_armor_stand
