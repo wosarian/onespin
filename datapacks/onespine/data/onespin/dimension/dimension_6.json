@@ -1,0 +1,17 @@
+{
+    "type": "onespin:dimension_6_type",
+    "generator": {
+        "type": "minecraft:flat",
+        "settings": {
+            "biome": "onespin:dimension_6_biome",
+            "lakes": false,
+            "features": false,
+            "layers": [
+                {
+                    "block": "minecraft:powder_snow",
+                    "height": 384
+                }
+            ]
+        }
+    }
+}

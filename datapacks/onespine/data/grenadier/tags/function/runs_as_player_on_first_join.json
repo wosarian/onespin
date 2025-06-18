@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "onespin:z/player_first_join/main",
+        "onespin:z/minigames/minigame_5/set_lives"
+    ]
+}

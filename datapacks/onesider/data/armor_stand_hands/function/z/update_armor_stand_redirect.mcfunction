@@ -1,0 +1,1 @@
+execute if score #onesider-toggle onesider-armorStandHands-toggle matches 1 as @e[type=armor_stand,tag=!armorStandUpdated] run function armor_stand_hands:z/update_armor_stand

@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "onespin:z/tick/main",
+        "onespin:z/defender/freeze_on_entity_overload"
+    ]
+}

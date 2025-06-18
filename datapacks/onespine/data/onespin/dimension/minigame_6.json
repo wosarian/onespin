@@ -1,0 +1,17 @@
+{
+    "type": "onespin:minigame_6_type",
+    "generator": {
+        "type": "minecraft:flat",
+        "settings": {
+            "biome": "onespin:minigame_6_biome",
+            "lakes": false,
+            "features": false,
+            "layers": [
+                {
+                    "block": "minecraft:air",
+                    "height": 1
+                }
+            ]
+        }
+    }
+}

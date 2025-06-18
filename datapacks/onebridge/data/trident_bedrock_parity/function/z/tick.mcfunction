@@ -1,0 +1,1 @@
+execute as @e[type=drowned,tag=!drownedMainhandUpdated] at @s if predicate grenadier:location/in_dimension/any_minecraft run function trident_bedrock_parity:z/update_drowned_mainhand

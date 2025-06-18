@@ -1,0 +1,17 @@
+{
+    "replace": false,
+    "values": [
+        "onespin:z/tick/player/main",
+        "onespin:z/tick/player/set_operator_permission_levels",
+        "onespin:z/minigames/minigame_4/joining",
+        "onespin:z/minigames/minigame_4/autosave",
+        "onespin:z/minigames/minigame_4/leaving",
+        "onespin:z/minigames/minigame_5/save_location",
+        "onespin:z/minigames/minigame_5/remove_tag_outside_game",
+        "onespin:z/minigames/minigame_5/teleport_to_save",
+        "onespin:z/minigames/minigame_5/lose_life_in_void",
+        "onespin:z/minigames/minigame_5/lose_life_on_death",
+        "onespin:z/minigames/minigame_5/remove_save",
+        "onespin:z/update_idle_status"
+    ]
+}

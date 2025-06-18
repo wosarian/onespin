@@ -1,0 +1,23 @@
+{
+  "pack": {
+    "description": [
+      {
+        "text": "Grenadier",
+        "color": "light_purple",
+        "italic": false,
+        "bold": true
+      },
+      {
+        "text": "\nonespin",
+        "color": "dark_purple",
+        "italic": false,
+        "bold": false
+      }
+    ],
+    "pack_format": 71,
+    "supported_formats": [
+      71,
+      80
+    ]
+  }
+}

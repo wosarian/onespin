@@ -1,0 +1,36 @@
+{
+  "pack": {
+    "description": [
+      {
+        "text": "onespine",
+        "color": "aqua",
+        "italic": false,
+        "bold": true
+      },
+      {
+        "text": "\nonespin",
+        "color": "dark_aqua",
+        "italic": false,
+        "bold": false
+      }
+    ],
+    "pack_format": 71,
+    "supported_formats": [
+      63,
+      71,
+      80
+    ]
+  },
+  "filter": {
+    "block": [
+      {
+        "namespace": "minecraft",
+        "path": "advancement/.*"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*"
+      }
+    ]
+  }
+}

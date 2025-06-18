@@ -1,0 +1,1 @@
+scoreboard players set @s OS-5-lives 3

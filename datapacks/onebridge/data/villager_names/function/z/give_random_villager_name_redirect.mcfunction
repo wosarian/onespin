@@ -1,0 +1,2 @@
+
+execute if score #onesider-toggle onesider-villagerNames-toggle matches 1 as @e[type=#villager_names:are_named,tag=!villagerNamed] at @s if predicate grenadier:location/in_dimension/any_minecraft run function onesider:villager_names/z/give_random_villager_name
