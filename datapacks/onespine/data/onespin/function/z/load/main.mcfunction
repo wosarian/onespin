@@ -1,6 +1,7 @@
 
 # # Game Rules
 
+gamerule locatorBar false
 gamerule announceAdvancements false
 gamerule disableElytraMovementCheck true
 gamerule disablePlayerMovementCheck true
