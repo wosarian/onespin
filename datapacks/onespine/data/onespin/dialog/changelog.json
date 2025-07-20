@@ -1,0 +1,79 @@
+{
+  "type": "minecraft:notice",
+  "title": {
+    "text": "onespin",
+    "color": "aqua",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        "",
+        {
+          "text": "┌━━━━━━━━ ",
+          "color": "gray",
+          "bold": true
+        },
+        {
+          "text": "CHANGELOG",
+          "color": "aqua",
+          "bold": true,
+          "underlined": true
+        },
+        {
+          "text": " ━━━━━━━━┐",
+          "color": "gray",
+          "bold": true
+        },
+        {
+          "text": "\n\n01.06.2025",
+          "color": "green",
+          "bold": true
+        },
+        {
+          "text": "\n\n\n\nGeneral",
+          "color": "aqua",
+          "bold": true
+        },
+        {
+          "text": "\n\nServer has been moved over from ApexHosting to Modrinth's server hosting service."
+        },
+        {
+          "text": "\n\nMinigame - Survival",
+          "color": "aqua",
+          "bold": true
+        },
+        {
+          "text": "\n\nHomes",
+          "color": "yellow"
+        },
+        {
+          "text": " data pack has been added to "
+        },
+        {
+          "text": "Survival",
+          "color": "red"
+        },
+        {
+          "text": ", which allows you to set a home waypoint. \nRead "
+        },
+        {
+          "text": "wiki",
+          "color": "light_purple",
+          "underlined": true,
+          "click_event": {
+            "action": "open_url",
+            "url": "https://sites.google.com/view/spinners-end-onespin/minigames/survival"
+          }
+        },
+        {
+          "text": " for more info."
+        }
+      ],
+      "width": 200
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true
+}

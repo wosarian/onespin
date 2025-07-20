@@ -1,17 +1,32 @@
 {
-  "type": "minecraft:server_links",
-  "button_width": 310,
+  "type": "minecraft:multi_action",
+  "inputs": [],
   "columns": 1,
   "exit_action": {
-    "label": {
-      "translate": "gui.back"
-    },
+    "label": "Back",
     "width": 200
   },
-  "external_title": {
-    "translate": "menu.server_links"
-  },
   "title": {
-    "text": "isnert random tetx"
-  }
+    "text": "onespin",
+    "color": "aqua",
+    "bold": true
+  },
+  "actions": [
+    {
+      "label": "Changelog",
+      "width": 200,
+      "action": {
+        "type": "show_dialog",
+        "dialog": "onespin:changelog"
+      }
+    },
+    {
+      "label": "Official Website",
+      "width": 200,
+      "action": {
+        "type": "open_url",
+        "url": "https://sites.google.com/view/spinners-end-onespin/"
+      }
+    }
+  ]
 }

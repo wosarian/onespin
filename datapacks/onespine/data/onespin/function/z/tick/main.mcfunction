@@ -33,7 +33,7 @@ execute as @a[predicate=onespin:location/dimension/dimension_0] run gamerule doD
 
 execute store result storage onespin:scores scores.copper_cock_length.num int 1 run scoreboard players add #OS-main OS-copperCockLoop 1
 function onespin:z/extend_copper_cock with storage onespin:scores scores.copper_cock_length
-execute if score #OS-main OS-copperCockMaxLength < #OS-main OS-copperCockLoop run scoreboard players set #OS-main OS-copperCockLoop 164
+execute if score #OS-main OS-copperCockMaxLength < #OS-main OS-copperCockLoop run scoreboard players set #OS-main OS-copperCockLoop 5
 
 # Bob lock
 
