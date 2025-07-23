@@ -127,6 +127,10 @@ execute as @s[x=-145,y=-59,z=75.9,dx=1,dy=1,dz=0,scores={grenadier-playerID=1}] 
 execute as @s[x=-145,y=-59,z=76.1,dx=1,dy=1,dz=0,scores={grenadier-playerID=1}] at @s in onespin:dimension_1 run tp @s ~ ~ 75
 
 
+execute if entity @s[x=-125,y=80,z=-97,dx=14,dy=13,dz=14,predicate=onespin:location/dimension/dimension_2] in onespin:dimension_2 run tag @s add OS-7-inGame
+execute unless entity @s[x=-125,y=80,z=-97,dx=14,dy=13,dz=14,predicate=onespin:location/dimension/dimension_2] in onespin:dimension_2 run tag @s remove OS-7-inGame
+
+
 # kirby power
 
 execute at @s if predicate grenadier:location/in_dimension/any_minecraft if score @s grenadier-playerPitch matches -179..-135 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-Z ⬆ N",color:gold}]
@@ -135,11 +139,14 @@ execute at @s if predicate grenadier:location/in_dimension/any_minecraft if scor
 execute at @s if predicate grenadier:location/in_dimension/any_minecraft if score @s grenadier-playerPitch matches -136..-45 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"+X ➡ E",color:red}]
 execute at @s if predicate grenadier:location/in_dimension/any_minecraft if score @s grenadier-playerPitch matches 46..135 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-X ⬅ W",color:yellow}]
 
-execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches -179..-135 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-Z ⬆ N",color:gold}]
-execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches 135..179 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-Z ⬆ N",color:gold}]
-execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches -46..45 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"+Z ⬇ S",color:"aqua"}]
-execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches -136..-45 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"+X ➡ E",color:red}]
-execute at @s if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches 46..135 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-X ⬅ W",color:yellow}]
+execute at @s[tag=!OS-7-inGame] if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches -179..-135 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-Z ⬆ N",color:gold}]
+execute at @s[tag=!OS-7-inGame] if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches 135..179 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-Z ⬆ N",color:gold}]
+execute at @s[tag=!OS-7-inGame] if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches -46..45 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"+Z ⬇ S",color:"aqua"}]
+execute at @s[tag=!OS-7-inGame] if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches -136..-45 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"+X ➡ E",color:red}]
+execute at @s[tag=!OS-7-inGame] if predicate grenadier:location/in_dimension/any_minecraft_inverted if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches 46..135 run title @s actionbar [{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-X ⬅ W",color:yellow}]
+
+
+# -125 93 -97 14 13 14 - coordinates
 
 # Branches.
 
@@ -163,14 +170,17 @@ $execute \
 
 
 execute \ 
-    as @s[x=-14999992,y=-66,z=-14999992,dx=29999984,dy=-29999933,dz=29999984] run \ 
+    as @s[x=-14999992,y=-66,z=-14999992,dx=29999984,dy=-10,dz=29999984] run \ 
         effect give @s regeneration 4 255 true
 execute \ 
-    as @s[x=-14999992,y=-66,z=-14999992,dx=29999984,dy=-29999933,dz=29999984] run \ 
+    as @s[x=-14999992,y=-66,z=-14999992,dx=29999984,dy=-10,dz=29999984] run \ 
         effect give @s resistance 4 255 true
 $execute \ 
-    as @s[x=-14999992,y=-66,z=-14999992,dx=29999984,dy=-29999933,dz=29999984,tag=!OS-5-inGame] run \ 
+    as @s[x=-14999992,y=-66,z=-14999992,dx=29999984,dy=-10,dz=29999984,tag=!OS-5-inGame] run \ 
         function onespin:z/teleport with storage grenadier:players player.$(ID).spawnpoint
+
+
+# limbo 1 starts from -77, limbo 2 starts from -100
 
 execute \ 
     as @s[scores={panel=1}] run \ 
@@ -180,16 +190,16 @@ execute \
 
 $scoreboard players display numberformat @s[tag=!OS-isAFK] OS-playerBelowName fixed [{color:"red",storage:"grenadier:players",nbt:"player.$(ID).health_percent"},{text:"%",color:red}]
 
-execute as @s if score @s OS-rainbow = @s OS-rainbow run scoreboard players add @s OS-rainbow 1
+#execute as @s if score @s OS-rainbow = @s OS-rainbow run scoreboard players add @s OS-rainbow 1
 
-$execute as @s if score @s OS-rainbow matches 1..5 run team modify OS-player-$(ID) suffix " is dead"
-$execute as @s if score @s OS-rainbow matches 6..10 run team modify OS-player-$(ID) suffix " is alive"
-$execute as @s if score @s OS-rainbow matches 1..5 run team modify OS-player-$(ID) color red
-$execute as @s if score @s OS-rainbow matches 6..10 run team modify OS-player-$(ID) color green
+#$execute as @s if score @s OS-rainbow matches 1..5 run team modify OS-player-$(ID) suffix " is dead"
+#$execute as @s if score @s OS-rainbow matches 6..10 run team modify OS-player-$(ID) suffix " is alive"
+#$execute as @s if score @s OS-rainbow matches 1..5 run team modify OS-player-$(ID) color red
+#$execute as @s if score @s OS-rainbow matches 6..10 run team modify OS-player-$(ID) color green
 
 # $execute as @s if score @s OS-rainbow matches 1..2 run team modify OS-player-$(ID) color yellow
 # $execute as @s if score @s OS-rainbow matches 3..4 run team modify OS-player-$(ID) color red
 # $execute as @s if score @s OS-rainbow matches 5..6 run team modify OS-player-$(ID) color blue
 # $execute as @s if score @s OS-rainbow matches 7..8 run team modify OS-player-$(ID) color green
 # $execute as @s if score @s OS-rainbow matches 9..10 run team modify OS-player-$(ID) color light_purple
-execute as @s if score @s OS-rainbow matches 11.. run scoreboard players set @s OS-rainbow 0
+#execute as @s if score @s OS-rainbow matches 11.. run scoreboard players set @s OS-rainbow 0

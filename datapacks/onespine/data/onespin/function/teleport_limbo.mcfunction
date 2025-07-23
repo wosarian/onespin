@@ -3,7 +3,7 @@
 #
 
 # Set limbo level.
-$scoreboard players set @n[tag=OS-bob] OS-limboLevel $(level)
+$scoreboard players set #OS-main OS-limboLevel $(level)
 
 
 # Tests if the executor is a player entity and returns the function if false.
@@ -31,30 +31,30 @@ $execute unless entity @s[name=$(name)] run \
         return fail
 
 # Tell the executor if the specified level of limbo does not exist.
-execute if score @n[tag=OS-bob] OS-limboLevel matches ..0 run \ 
+execute if score #OS-main OS-limboLevel matches ..0 run \ 
         tellraw @s [{"text":"Specified level of limbo does not exist","color":"red"}]
 #
-execute if score @n[tag=OS-bob] OS-limboLevel matches 3.. run \ 
+execute if score #OS-main OS-limboLevel matches 3.. run \ 
         tellraw @s [{"text":"Specified level of limbo does not exist","color":"red"}]
 
 # Return if the specified level of limbo does not exist.
-execute if score @n[tag=OS-bob] OS-limboLevel matches ..0 run \ 
+execute if score #OS-main OS-limboLevel matches ..0 run \ 
         return fail
-execute if score @n[tag=OS-bob] OS-limboLevel matches 3.. run \
+execute if score #OS-main OS-limboLevel matches 3.. run \
         return fail
 
 # Set spawnpoint of player with specified name to the first level of limbo.
-$execute if score @n[tag=OS-bob] OS-limboLevel matches 1 run \
-        spawnpoint $(name) ~ -75 ~
+$execute if score #OS-main OS-limboLevel matches 1 run \
+        spawnpoint $(name) ~ -85 ~
 
 # Teleport player with specified name to the first level of limbo.
-$execute if score @n[tag=OS-bob] OS-limboLevel matches 1 run \
-        tp $(name) ~ -75 ~
+$execute if score #OS-main OS-limboLevel matches 1 run \
+        tp $(name) ~ -85 ~
 
 # Set spawnpoint of player with specified name to the first level of limbo.
-$execute if score @n[tag=OS-bob] OS-limboLevel matches 2 run \ 
+$execute if score #OS-main OS-limboLevel matches 2 run \ 
         spawnpoint $(name) ~ -9999 ~
 
 # Teleport player with specified name to the first level of limbo.
-$execute if score @n[tag=OS-bob] OS-limboLevel matches 2 run \ 
+$execute if score #OS-main OS-limboLevel matches 2 run \ 
         tp $(name) ~ -9999 ~

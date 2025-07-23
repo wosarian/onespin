@@ -13,14 +13,6 @@
   },
   "actions": [
     {
-      "label": "Changelog",
-      "width": 200,
-      "action": {
-        "type": "show_dialog",
-        "dialog": "onespin:changelog"
-      }
-    },
-    {
       "label": "Official Website",
       "width": 200,
       "action": {

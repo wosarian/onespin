@@ -67,8 +67,3 @@ execute as @e[type=#grenadier:explosive] \
 execute as @e[type=#grenadier:tameable,tag=!OS-4-petProtected] at @s if predicate grenadier:location/in_dimension/any_minecraft \ 
     if predicate grenadier:entity/has_owner \
         run function onespin:z/minigames/minigame_4/protect_pet_on_tame
-
-# Runs silence tagged animal function for every animal.
-
-execute as @e[type=!#grenadier:non_living] at @s if predicate grenadier:location/in_dimension/any_minecraft \ 
-    run function onespin:z/minigames/minigame_4/silence_tagged_mob
