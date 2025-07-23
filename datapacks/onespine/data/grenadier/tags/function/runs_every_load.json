@@ -2,7 +2,7 @@
     "replace": false,
     "values": [
         "onespin:z/load/main",
-        "onespin:z/minigames/minigame_5/prepare_scores",
-        "onespin:z/defender/prepare_scores"
+        "os_minigame_5:z/prepare_scores",
+        "os_defender:z/prepare_scores"
     ]
 }
