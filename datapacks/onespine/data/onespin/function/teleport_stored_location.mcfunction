@@ -31,4 +31,4 @@ $execute if entity @s[scores={grenadier-playerPermissionLevel=0}] if score #OS-b
 $function onespin:z/teleport with storage onespin:locations stored_location.$(ID)
 
 # Tell the executor that they have been teleported to the specified stored location.
-$tellraw @s ["Teleported ",{"selector": "@s"}," to a stored location called ",{"storage":"onespin:locations","nbt":"stored_location.$(ID).name","color":"green"}]
+#$tellraw @s ["Teleported ",{"selector": "@s"}," to a stored location called ",{"storage":"onespin:locations","nbt":"stored_location.$(ID).name","color":"green"}]

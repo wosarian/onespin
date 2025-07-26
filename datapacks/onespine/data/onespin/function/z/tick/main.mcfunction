@@ -55,11 +55,6 @@ execute as @e[type=!#grenadier:non_living] \
 execute as @e[tag=OS-path] \ 
     run function onespin:z/path
 
-# Runs onespin Defender Entity Module for every explosive entity.
-
-execute as @e[type=#grenadier:explosive] \ 
-    run function onespin:z/defender_entity
-
 # # Survival.
 
 # Runs pet_protection function for every tameable entity.
