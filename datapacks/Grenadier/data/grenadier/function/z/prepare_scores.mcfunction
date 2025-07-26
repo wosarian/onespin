@@ -121,7 +121,3 @@ scoreboard objectives add grenadier-random-100 dummy
 scoreboard objectives modify grenadier-random-100 displayname {"text": "Random Number From 100"}
 scoreboard objectives add grenadier-random-1000 dummy
 scoreboard objectives modify grenadier-random-1000 displayname {"text": "Random Number From 1000"}
-
-# Custom Data Item Use Scores
-
-scoreboard objectives add grenadier-removeCustomDataItemTag-delay dummy

@@ -1,5 +1,6 @@
 {
     "values": [
-        "grenadier:z/prepare_scores"
+        "grenadier:z/prepare_scores",
+        "grenadier_right_click_item:z/prepare_scores"
     ]
 }
