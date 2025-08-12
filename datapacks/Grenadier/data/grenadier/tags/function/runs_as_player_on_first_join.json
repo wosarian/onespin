@@ -1,6 +1,6 @@
 {
     "values": [
-        "grenadier:z/give_player_id",
+        "grenadier_core:z/give_player_id",
         "grenadier:z/set_player_permission_level"
     ]
 }

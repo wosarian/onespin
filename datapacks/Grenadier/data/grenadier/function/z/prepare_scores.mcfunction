@@ -1,10 +1,6 @@
 
 # Main
 
-scoreboard objectives add grenadier-tickDelay dummy
-scoreboard objectives modify grenadier-tickDelay displayname {"text": "Tick Delay"}
-scoreboard objectives add grenadier-playerID dummy
-scoreboard objectives modify grenadier-playerID displayname {"text": "Player ID"}
 scoreboard objectives add grenadier-playerPermissionLevel dummy
 scoreboard objectives modify grenadier-playerPermissionLevel displayname {"text": "Player Permission Level"}
 
