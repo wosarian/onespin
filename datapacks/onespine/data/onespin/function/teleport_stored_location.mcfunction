@@ -24,8 +24,8 @@ $execute unless data storage onespin:locations stored_location.$(ID) run tellraw
 $execute unless data storage onespin:locations stored_location.$(ID) run return fail
 #
 #
-$execute if entity @s[scores={grenadier-playerPermissionLevel=0}] if score #OS-bob OS-storedLocation-$(ID)-operator matches 1 run tellraw @s ["",{"text":"Specified location requires minimum permission level of 2 or more","color":"red"}]
-$execute if entity @s[scores={grenadier-playerPermissionLevel=0}] if score #OS-bob OS-storedLocation-$(ID)-operator matches 1 run return fail
+execute if entity @s[scores={grenadier-playerPermissionLevel=0}] run tellraw @s ["",{"text":"Specified location requires minimum permission level of 2 or more","color":"red"}]
+execute if entity @s[scores={grenadier-playerPermissionLevel=0}] run return fail
 
 # Run teleport function with specified stored location data.
 $function onespin:z/teleport with storage onespin:locations stored_location.$(ID)

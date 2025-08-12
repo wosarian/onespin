@@ -12,6 +12,7 @@
         "os_minigame_5:z/lose_life_in_void",
         "os_minigame_5:z/lose_life_on_death",
         "os_minigame_5:z/remove_save",
-        "onespin:z/update_idle_status"
+        "onespin:z/update_idle_status",
+        "onespin:z/teleport_to_core"
     ]
 }

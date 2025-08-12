@@ -1,0 +1,17 @@
+{
+    "type": "onespin:dimension_7_type",
+    "generator": {
+        "type": "minecraft:flat",
+        "settings": {
+            "biome": "onespin:dimension_7_biome",
+            "lakes": false,
+            "features": false,
+            "layers": [
+                {
+                    "block": "minecraft:air",
+                    "height": 1
+                }
+            ]
+        }
+    }
+}

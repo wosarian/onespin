@@ -35,10 +35,6 @@ execute store result storage onespin:scores scores.copper_cock_length.num int 1 
 function onespin:z/extend_copper_cock with storage onespin:scores scores.copper_cock_length
 execute if score #OS-main OS-copperCockMaxLength < #OS-main OS-copperCockLoop run scoreboard players set #OS-main OS-copperCockLoop 5
 
-# Bob lock
-
-execute as @e[tag=OS-bob] in onespin:dimension_1 run tp @s -144 -59 79
-
 
 
 # # # Branches.

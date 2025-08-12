@@ -1,8 +1,8 @@
 {
     "values": [
-        "grenadier:z/redirect_as_player",
+        "grenadier_core:z/redirect_as_player",
         "grenadier:z/update_counter_scores",
         "grenadier:z/update_random_scores",
-        "grenadier:z/redirect_as_entity"
+        "grenadier_core:z/redirect_as_entity"
     ]
 }

@@ -1,2 +1,2 @@
 
-scoreboard objectives add grenadierRightClickItem-usingDelay dummy
+scoreboard objectives add grenadier-rightClickItem-usingDelay dummy

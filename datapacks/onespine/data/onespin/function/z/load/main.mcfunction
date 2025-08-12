@@ -73,6 +73,8 @@ scoreboard objectives modify grenadier-playerPermissionLevel displayname {"text"
 
 # Other
 
+scoreboard objectives add core trigger
+scoreboard objectives modify core displayname {"text": "Teleport to Core"}
 scoreboard objectives add OS-debug dummy
 scoreboard objectives add OS-nv-toggle dummy
 scoreboard objectives add OS-limboLevel dummy

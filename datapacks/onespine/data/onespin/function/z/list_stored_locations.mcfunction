@@ -90,16 +90,16 @@ execute if entity @s[tag=!OS-listStoredLocations-start] run tag @s add OS-listSt
 
 # Adds to the forStoredLocation until it reaches either the amount of locations that are stored or Dynamic-15.
 
-execute if score @n[tag=OS-bob] OS-storedLocations >= @s OS-forStoredLocation if score @s OS-forStoredLocation <= @s OS-dynamic-10 store result storage onespin:scores forStoredLocation.ID int 1 run scoreboard players add @s OS-forStoredLocation 1
+execute if score #OS-main OS-storedLocations >= @s OS-forStoredLocation if score @s OS-forStoredLocation <= @s OS-dynamic-10 store result storage onespin:scores forStoredLocation.ID int 1 run scoreboard players add @s OS-forStoredLocation 1
 
-execute if score @n[tag=OS-bob] OS-storedLocations >= @s OS-forStoredLocation if score @s OS-forStoredLocation <= @s OS-dynamic-10 run function onespin:print_stored_location with storage onespin:scores forStoredLocation
+execute if score #OS-main OS-storedLocations >= @s OS-forStoredLocation if score @s OS-forStoredLocation <= @s OS-dynamic-10 run function onespin:print_stored_location with storage onespin:scores forStoredLocation
 
 
 
 
 # Adds the tag when all stored locations have been printed to do the resetting and such.
 
-execute if score @n[tag=OS-bob] OS-storedLocations <= @s OS-forStoredLocation run tag @s add OS-listStoredLocations-end
+execute if score #OS-main OS-storedLocations <= @s OS-forStoredLocation run tag @s add OS-listStoredLocations-end
 
 execute if score @s OS-dynamic-10 <= @s OS-forStoredLocation run tag @s add OS-listStoredLocations-end
 
