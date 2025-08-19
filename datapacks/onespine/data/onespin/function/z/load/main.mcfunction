@@ -18,7 +18,7 @@ gamerule showDeathMessages true
 gamerule spawnChunkRadius 0
 gamerule spawnRadius 0
 # %HIGH%
-gamerule maxCommandChainLength 1000000
+gamerule maxCommandChainLength 999999999
 
 gamerule playersSleepingPercentage 0
 gamerule snowAccumulationHeight 1

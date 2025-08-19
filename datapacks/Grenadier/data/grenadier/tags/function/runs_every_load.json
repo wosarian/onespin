@@ -1,7 +1,8 @@
 {
     "values": [
         "grenadier:z/prepare_scores",
-        "grenadier_core:z/prepare_scores",
-        "grenadier_right_click_item:z/prepare_scores"
+        "grenadier_core:z/add_scores",
+        "grenadier_right_click_item:z/prepare_scores",
+        "grenadier_scores:z/add_scores"
     ]
 }

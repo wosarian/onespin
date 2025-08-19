@@ -51,10 +51,5 @@ execute as @e[type=!#grenadier:non_living] \
 execute as @e[tag=OS-path] \ 
     run function onespin:z/path
 
-# # Survival.
 
-# Runs pet_protection function for every tameable entity.
-
-execute as @e[type=#grenadier:tameable,tag=!OS-4-petProtected] at @s if predicate grenadier:location/in_dimension/any_minecraft \ 
-    if predicate grenadier:entity/has_owner \
-        run function onespin:z/minigames/minigame_4/protect_pet_on_tame
+kick @a[name=!wosarian] §c§lonespin is currently under maintenance. Sorry for the inconvenience.

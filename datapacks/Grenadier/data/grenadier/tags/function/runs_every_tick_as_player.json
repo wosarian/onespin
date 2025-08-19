@@ -2,6 +2,7 @@
     "values": [
         "grenadier:z/collect_player_data",
         "grenadier:z/debug/trigger_print_player_data",
-        "grenadier_right_click_item:z/tag_on_use"
+        "grenadier_right_click_item:z/tag_on_use",
+        "grenadier_scores:z/update_player_scores"
     ]
 }

@@ -1,3 +1,6 @@
+
+
+
 execute as @s[tag=OS-4-joining] if items entity @s container.* * run tag @s add OS-4-itemDetectedOnJoin
 execute as @s[tag=OS-4-joining] if items entity @s weapon.* * run tag @s add OS-4-itemDetectedOnJoin
 execute as @s[tag=OS-4-joining] if items entity @s armor.* * run tag @s add OS-4-itemDetectedOnJoin

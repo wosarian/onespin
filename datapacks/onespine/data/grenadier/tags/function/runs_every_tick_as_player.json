@@ -13,6 +13,9 @@
         "os_minigame_5:z/lose_life_on_death",
         "os_minigame_5:z/remove_save",
         "onespin:z/update_idle_status",
-        "onespin:z/teleport_to_core"
+        "onespin:z/teleport_to_core",
+        "onespin:z/teleport_from_void",
+        "onespin:z/show_navigation_hud",
+        "onespin:z/create_team_for_each_player"
     ]
 }

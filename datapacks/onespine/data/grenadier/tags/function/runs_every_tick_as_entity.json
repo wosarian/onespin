@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "os_defender:z/disable_explosions"
+        "os_defender:z/disable_explosions",
+        "os_minigame_4:z/protect_pet_on_tame"
     ]
 }

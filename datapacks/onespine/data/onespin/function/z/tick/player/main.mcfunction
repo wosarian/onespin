@@ -40,21 +40,16 @@ advancement revoke @s[tag=grenadier-taggedItemUsing] only onespin:use_tagged_ite
 
 
 execute \ 
-    if score @s OS-playerDead matches 1.. run \ 
-        scoreboard players add @s OS-RTCResetDelay 1
+    if score @s OS-playerDead matches 1.. \
+        run \ 
+            scoreboard players add @s OS-RTCResetDelay 1
+
 execute \ 
     if score @s OS-RTCResetDelay matches 2.. run \ 
          function onespin:z/reset_rtc_scores
 execute \ 
     if score @s OS-RTCResetDelay matches 2.. run \ 
         scoreboard players set @s OS-RTCResetDelay 0
-
-
-# Run if player is in void.
-execute if entity @s[x=-14999992,y=-65,z=-14999992,dx=29999984,dy=-29999933,dz=29999984] run effect give @s minecraft:saturation 2 255 true
-execute if entity @s[x=-14999992,y=-65,z=-14999992,dx=29999984,dy=-29999933,dz=29999984] run effect give @s minecraft:regeneration 2 255 true
-execute if entity @s[x=-14999992,y=-65,z=-14999992,dx=29999984,dy=-29999933,dz=29999984] run effect give @s minecraft:resistance 2 255 true
-execute if entity @s[x=-14999992,y=-100,z=-14999992,dx=29999984,dy=-29999899,dz=29999984] run kill @s
 
 # Move player in the facing direction if player is using the OS Spectator Tool.
 execute if items entity @s[tag=OS-taggedItemUsing] weapon.* *[minecraft:custom_data={OS-spectatorTool:true}] at @s run tp @s ^ ^ ^0.5
@@ -120,13 +115,6 @@ execute unless entity @s[x=6633,y=80,z=-65,dx=80,dy=41,dz=129,tag=OS-inLibrary] 
 execute if entity @s[tag=OS-inLibrary] run effect give @s night_vision infinite 255 true
 #execute if entity @s[tag=!OS-inLibrary] run effect clear @s night_vision
 
-
-# You are the chosen one
-
-execute as @s[x=-145,y=-59,z=75.9,dx=1,dy=1,dz=0,scores={grenadier-playerID=1}] at @s in onespin:dimension_1 run tp @s ~ ~ 77
-execute as @s[x=-145,y=-59,z=76.1,dx=1,dy=1,dz=0,scores={grenadier-playerID=1}] at @s in onespin:dimension_1 run tp @s ~ ~ 75
-
-
 execute if entity @s[x=-125,y=80,z=-97,dx=14,dy=13,dz=14,predicate=onespin:location/dimension/dimension_2] in onespin:dimension_2 run tag @s add OS-7-inGame
 execute unless entity @s[x=-125,y=80,z=-97,dx=14,dy=13,dz=14,predicate=onespin:location/dimension/dimension_2] in onespin:dimension_2 run tag @s remove OS-7-inGame
 
@@ -134,18 +122,7 @@ execute unless entity @s[x=-125,y=80,z=-97,dx=14,dy=13,dz=14,predicate=onespin:l
 # kirby power
 
 
-# -46..45 S 46..135 W 135..179 N -179..-135 N -136..-45 E
-# -46..0 S 1..45 S 46..90 W 91..135 W 136..179 N -179..-135 N -136..90 E 91..-45 E 
 
-
-execute at @s[tag=!OS-7-inGame] if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches -46..0 run title @s actionbar ["",{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"+",color:red},{text:"+",color:aqua},{text:" | ",color:"gray"},{text:"↓",color:"aqua"}]
-execute at @s[tag=!OS-7-inGame] if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches 1..45 run title @s actionbar ["",{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-",color:red},{text:"+",color:aqua},{text:" | ",color:"gray"},{text:"↓",color:"aqua"}]
-execute at @s[tag=!OS-7-inGame] if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches 46..90 run title @s actionbar ["",{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-",color:red},{text:"+",color:aqua},{text:" | ",color:"gray"},{text:"←",color:yellow}]
-execute at @s[tag=!OS-7-inGame] if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches 91..135 run title @s actionbar ["",{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-",color:red},{text:"-",color:aqua},{text:" | ",color:"gray"},{text:"←",color:yellow}]
-execute at @s[tag=!OS-7-inGame] if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches 136..179 run title @s actionbar ["",{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"-",color:red},{text:"-",color:aqua},{text:" | ",color:"gray"},{text:"↑",color:gold}]
-execute at @s[tag=!OS-7-inGame] if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches -179..-135 run title @s actionbar ["",{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"+",color:red},{text:"-",color:aqua},{text:" | ",color:"gray"},{text:"↑",color:gold}]
-execute at @s[tag=!OS-7-inGame] if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches -136..-90 run title @s actionbar ["",{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"+",color:red},{text:"-",color:aqua},{text:" | ",color:"gray"},{text:"→",color:red}]
-execute at @s[tag=!OS-7-inGame] if score @s grenadier-playerPermissionLevel matches 1.. if score @s grenadier-playerPitch matches -90..-45 run title @s actionbar ["",{text:"X: ",color:red},{"score":{"objective":"grenadier-playerX","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Y: ",color:green},{"score":{"objective":"grenadier-playerY","name":"*"},color:white},{text:" | ",color:"gray"},{text:"Z: ",color:aqua},{"score":{"objective":"grenadier-playerZ","name":"*"},color:white},{text:" | ",color:"gray"},{text:"+",color:red},{text:"+",color:aqua},{text:" | ",color:"gray"},{text:"→",color:red}]
 
 
 
@@ -157,13 +134,6 @@ execute at @s[tag=!OS-7-inGame] if score @s grenadier-playerPermissionLevel matc
 function onespin:z/defender_player
 
 
-# AAAAAAAAAAAAAA
-$team add OS-player-$(ID)
-
-
-$team join OS-player-$(ID) @s[team=!OS-1-team,tag=!OS-isAFK]
-
-
 
 
 $execute \ 
@@ -171,17 +141,6 @@ $execute \
         at @s \ 
             unless predicate grenadier:location/in_dimension/any_minecraft run \ 
                 function onespin:z/teleport with storage onespin:minigame_4 player.$(ID)
-
-
-execute \ 
-    as @s[x=-14999992,y=-66,z=-14999992,dx=29999984,dy=-10,dz=29999984] run \ 
-        effect give @s regeneration 4 255 true
-execute \ 
-    as @s[x=-14999992,y=-66,z=-14999992,dx=29999984,dy=-10,dz=29999984] run \ 
-        effect give @s resistance 4 255 true
-$execute \ 
-    as @s[x=-14999992,y=-66,z=-14999992,dx=29999984,dy=-10,dz=29999984,tag=!OS-5-inGame] run \ 
-        function onespin:z/teleport with storage grenadier:players player.$(ID).spawnpoint
 
 
 # limbo 1 starts from -77, limbo 2 starts from -100

@@ -1,0 +1,55 @@
+
+scoreboard objectives add grenadier-loadedEntities dummy "Amount of Loaded Entities"
+scoreboard objectives add grenadier-loadedMobs dummy "Amount of Loaded Mobs"
+scoreboard objectives add grenadier-loadedZombies dummy "Amount of Loaded Zombies"
+scoreboard objectives add grenadier-loadedCreepers dummy "Amount of Loaded Creepers"
+scoreboard objectives add grenadier-loadedPigs dummy "Amount of Loaded Pigs"
+scoreboard objectives add grenadier-loadedTNTs dummy "Amount of Loaded TNTs"
+scoreboard objectives add grenadier-loadedSquids dummy "Amount of Loaded Squids"
+scoreboard objectives add grenadier-onlinePlayers dummy "Amount of Online Players"
+scoreboard objectives add grenadier-playerPercentHealth dummy "Player Health Percent"
+scoreboard objectives add grenadier-playerDamage dummy "Player Damage"
+scoreboard objectives add grenadier-playerPitch dummy "Player X Rotation"
+scoreboard objectives add grenadier-playerYaw dummy "Player Y Rotation"
+scoreboard objectives add grenadier-playerHealth dummy "Player Health"
+scoreboard objectives add grenadier-playerHealth-100 dummy "Player Health 100"
+scoreboard objectives add grenadier-playerMaxHealth dummy "Player Maximum Health"
+scoreboard objectives add grenadier-playerHunger food "Player Hunger"
+scoreboard objectives add grenadier-playerX dummy "Player X Coordinate"
+scoreboard objectives add grenadier-playerY dummy "Player Y Coordinate"
+scoreboard objectives add grenadier-playerZ dummy "Player Z Coordinate"
+scoreboard objectives add grenadier-playerXPLevels dummy "Player XP Levels"
+scoreboard objectives add grenadier-playerXPPoints dummy "Player XP Points"
+scoreboard objectives add grenadier-playerSpawnpointX dummy "Player Spawnpoint X Coordinate"
+scoreboard objectives add grenadier-playerSpawnpointY dummy "Player Spawnpoint Y Coordinate"
+scoreboard objectives add grenadier-playerSpawnpointZ dummy "Player Spawnpoint Z Coordinate"
+scoreboard objectives add grenadier-playerPlayTime minecraft.custom:minecraft.play_time "Total Playtime (In Ticks)"
+scoreboard objectives add grenadier-playerPlayTimeSeconds dummy "Total Playtime (In Seconds)"
+scoreboard objectives add grenadier-playerPlayTimeMinutes dummy "Total Playtime (In Minutes)"
+scoreboard objectives add grenadier-playerPlayTimeHours dummy "Total Playtime (In Hours)"
+scoreboard objectives add grenadier-playerPlayTimeDays dummy "Total Playtime (In Days)"
+scoreboard objectives add grenadier-random-6 dummy "Random Number From 6"
+scoreboard objectives add grenadier-random-2 dummy "Random Number From 2"
+scoreboard objectives add grenadier-random-3 dummy "Random Number From 3"
+scoreboard objectives add grenadier-random-20 dummy "Random Number From 20"
+scoreboard objectives add grenadier-random-5 dummy "Random Number From 5"
+scoreboard objectives add grenadier-random-100 dummy "Random Number From 100"
+scoreboard objectives add grenadier-random-1000 dummy "Random Number From 1000"
+scoreboard objectives add grenadier-const-20 dummy "Constant 20"
+scoreboard players set #grenadier-main grenadier-const-20 20
+scoreboard objectives add grenadier-const-24 dummy "Constant 24"
+scoreboard players set #grenadier-main grenadier-const-24 24
+scoreboard objectives add grenadier-const-100 dummy "Constant 100"
+scoreboard players set #grenadier-main grenadier-const-100 100
+scoreboard objectives add grenadier-const-60 dummy "Constant 60"
+scoreboard players set #grenadier-main grenadier-const-60 60
+scoreboard objectives add grenadier-const-1 dummy "Constant 1"
+scoreboard players set #grenadier-main grenadier-const-1 1
+scoreboard objectives add grenadier-const-0 dummy "Constant 0"
+scoreboard players set #grenadier-main grenadier-const-0 0
+scoreboard objectives add grenadier-const-15 dummy "Constant 15"
+scoreboard players set #grenadier-main grenadier-const-15 15
+scoreboard objectives add grenadier-const-10 dummy "Constant 10"
+scoreboard players set #grenadier-main grenadier-const-10 10
+scoreboard objectives add grenadier-const-5 dummy "Constant 5"
+scoreboard players set #grenadier-main grenadier-const-5 5

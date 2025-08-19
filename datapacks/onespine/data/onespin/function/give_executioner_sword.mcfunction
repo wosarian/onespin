@@ -20,4 +20,6 @@ execute \
 
 # Gives the Executioner Sword to the executor.
 
-give @s netherite_sword[attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:2048,operation:"add_value",slot:"hand"},{id:"attack_speed",type:"attack_speed",amount:1024,operation:"add_value",slot:"hand"},{id:"sweeping_damage_ratio",type:"sweeping_damage_ratio",amount:0,operation:"add_value",slot:"hand"}],item_name="OS Executioner Sword",rarity="epic",unbreakable={},tooltip_display={hide_tooltip:false,hidden_components:["attribute_modifiers","unbreakable","enchantments"]},item_model="onespin:executioner_sword"] 1
+give @s netherite_sword\
+[attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:2048,operation:"add_value",slot:"hand"},{id:"attack_speed",type:"attack_speed",amount:1024,operation:"add_value",slot:"hand"},{id:"sweeping_damage_ratio",type:"sweeping_damage_ratio",amount:0,operation:"add_value",slot:"hand"}],item_name="OS Executioner Sword",rarity="epic",unbreakable={},tooltip_display={hide_tooltip:false,hidden_components:["attribute_modifiers","unbreakable","enchantments"]},item_model="onespin:executioner_sword"] \
+1
