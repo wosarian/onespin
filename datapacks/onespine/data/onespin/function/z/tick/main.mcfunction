@@ -52,4 +52,4 @@ execute as @e[tag=OS-path] \
     run function onespin:z/path
 
 
-kick @a[name=!wosarian] §c§lonespin is currently under maintenance. Sorry for the inconvenience.
+#kick @a[name=!wosarian] §c§lonespin is currently under maintenance. Sorry for the inconvenience.

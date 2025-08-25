@@ -15,7 +15,6 @@ gamerule doTraderSpawning true
 gamerule drowningDamage true
 gamerule forgiveDeadPlayers false
 gamerule showDeathMessages true
-gamerule spawnChunkRadius 0
 gamerule spawnRadius 0
 # %HIGH%
 gamerule maxCommandChainLength 999999999

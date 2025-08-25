@@ -15,8 +15,11 @@
       }
     ],
     "pack_format": 81,
-    "supported_formats": [
-      81
-    ]
+    "supported_formats": {
+      "max_inclusive": 81,
+      "min_inclusive": 81
+    },
+    "min_format": 82,
+    "max_format": [84, 0]
   }
 }

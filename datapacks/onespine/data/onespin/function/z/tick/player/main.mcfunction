@@ -147,7 +147,7 @@ $execute \
 
 execute \ 
     as @s[scores={panel=1}] run \ 
-        function onespin:z/print_control_panel with storage grenadier:temp temp
+        function onespin:z/print_control_panel with storage grenadier:storage player
 
 # Below name
 
