@@ -1,3 +1,3 @@
 **/datapacks/*.zip
-**/datapacks/onespine/data/onespin/function/z/extend_copper_cock.mcfunction
+**/datapacks/onespine/data/onespin/function/z/tick/player/set_operator_permission_levels.mcfunction
 .directory
